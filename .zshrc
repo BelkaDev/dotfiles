@@ -111,17 +111,17 @@ zle -N my-backward-delete-word
 bindkey '^W' my-backward-delete-word
 reminder () { sleep $1 && notify-send -u critical -i clock $2 }
 vf() { fzf | xargs -r -I % $EDITOR % ;}
-pause () { node /home/belka/docs/projects/spotifyjwt/src/play_pause.js }
-search() { node /home/belka/docs/projects/spotifyjwt/src/search $* }
+pause () { node $HOME/.local/bin/spotify-headless/src/play_pause.js }
+search() { node $HOME/.local/bin/spotify-headless/src/search $* }
 queue() { 
 if [[ "$1" = "on" ]];  then
 shift
-node /home/belka/docs/projects/spotifyjwt/src/play $(on $*)
+node $HOME/.local/bin/spotify-headless/src/play $(on $*)
 else
-node /home/belka/docs/projects/spotifyjwt/src/play "$*"
+node $HOME/.local/bin/spotify-headless/src/play "$*"
 fi
 }
-on() { node /home/belka/docs/projects/spotifyjwt/src/transfer $(node /home/belka/docs/projects/spotifyjwt/src/connectedDevices $1)
+on() { node $HOME/.local/bin/spotify-headless/src/transfer $(node $HOME/.local/bin/spotify-headless/src/connectedDevices $1)
 }
 parse() {
   __trim() {
