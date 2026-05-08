@@ -3,16 +3,19 @@ set -euo pipefail
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-link() {
-  local src="$DOTFILES/$1"
-  local dst="$HOME/$1"
-  if [[ -f "$src" ]]; then
-    ln -sf "$src" "$dst"
-    echo "  linked $1"
-  fi
-}
+if ! command -v stow >/dev/null 2>&1; then
+  sudo apt-get install -y stow 2>/dev/null || brew install stow 2>/dev/null || { echo "install stow manually"; exit 1; }
+fi
 
-echo "Installing dotfiles from $DOTFILES"
-link .zshrc
-link .tmux.conf
+cd "$DOTFILES"
+
+for pkg in zsh tmux; do
+  stow --target="$HOME" --restow "$pkg"
+  echo "  stowed $pkg"
+done
+
+if command -v zsh >/dev/null 2>&1; then
+  chsh -s "$(which zsh)" 2>/dev/null || true
+fi
+
 echo "Done."
