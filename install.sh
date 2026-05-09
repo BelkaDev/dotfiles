@@ -35,7 +35,7 @@ if ! command -v zoxide >/dev/null 2>&1; then
 fi
 
 if ! command -v eza >/dev/null 2>&1; then
-  EZA_VERSION=$(curl -s "https://api.github.com/repos/eza-community/eza/releases/latest" | grep '"tag_name"' | sed 's/.*"v\([^"]*\)".*/\1/')
+  EZA_VERSION=$(gh api repos/eza-community/eza/releases/latest --jq '.tag_name' | sed 's/^v//')
   curl -Lo /tmp/eza.deb "https://github.com/eza-community/eza/releases/download/v${EZA_VERSION}/eza_${EZA_VERSION}_amd64.deb"
   sudo dpkg -i /tmp/eza.deb
 fi
@@ -45,7 +45,7 @@ if ! command -v bat >/dev/null 2>&1 && ! command -v batcat >/dev/null 2>&1; then
 fi
 
 if ! command -v lazygit >/dev/null 2>&1; then
-  LG_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep '"tag_name"' | sed 's/.*"v\([^"]*\)".*/\1/')
+  LG_VERSION=$(gh api repos/jesseduffield/lazygit/releases/latest --jq '.tag_name' | sed 's/^v//')
   curl -Lo /tmp/lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LG_VERSION}_Linux_x86_64.tar.gz"
   tar xf /tmp/lazygit.tar.gz -C /tmp lazygit
   sudo install /tmp/lazygit /usr/local/bin/lazygit
