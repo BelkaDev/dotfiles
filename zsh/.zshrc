@@ -27,6 +27,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # ── fzf ───────────────────────────────────────────────────────────────────────
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# ── zoxide ────────────────────────────────────────────────────────────────────
+command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh)"
+
 # ── direnv ────────────────────────────────────────────────────────────────────
 export DIRENV_LOG_FORMAT=""
 eval "$(direnv hook zsh)"
