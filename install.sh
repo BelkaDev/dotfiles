@@ -26,6 +26,10 @@ if [[ ! -d "$HOME/.fzf" ]]; then
   "$HOME/.fzf/install" --all --no-update-rc
 fi
 
+if [[ ! -d "$HOME/.tmux/plugins/tpm" ]]; then
+  git clone --depth=1 https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+fi
+
 rm -f "$HOME/.zshrc" "$HOME/.tmux.conf"
 
 cd "$DOTFILES"
