@@ -5,8 +5,10 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/.symfony5/bin:$HOME/.local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 # ZSH_THEME="agnoster"
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6c7086"
 
 # ── History ───────────────────────────────────────────────────────────────────
 HIST_STAMPS="yyyy-mm-dd"
