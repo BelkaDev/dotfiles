@@ -35,9 +35,12 @@ if ! command -v zoxide >/dev/null 2>&1; then
 fi
 
 if ! command -v eza >/dev/null 2>&1; then
-  EZA_VERSION=$(gh api repos/eza-community/eza/releases/latest --jq '.tag_name' | sed 's/^v//')
-  curl -Lo /tmp/eza.deb "https://github.com/eza-community/eza/releases/download/v${EZA_VERSION}/eza_${EZA_VERSION}_amd64.deb"
-  sudo dpkg -i /tmp/eza.deb
+  sudo apt-get install -y gpg
+  sudo mkdir -p /etc/apt/keyrings
+  wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+  echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+  sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+  sudo apt-get update && sudo apt-get install -y eza
 fi
 
 if ! command -v bat >/dev/null 2>&1 && ! command -v batcat >/dev/null 2>&1; then
