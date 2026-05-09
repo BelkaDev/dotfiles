@@ -34,6 +34,31 @@ if ! command -v zoxide >/dev/null 2>&1; then
   curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 fi
 
+# eza
+  if ! command -v eza >/dev/null 2>&1; then
+    curl -Lo /tmp/eza.tar.gz "https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz"
+    tar xf /tmp/eza.tar.gz -C /tmp eza
+    sudo install /tmp/eza /usr/local/bin/eza
+  fi
+
+  # bat
+  if ! command -v bat >/dev/null 2>&1 && ! command -v batcat >/dev/null 2>&1; then
+  fi
+  
+  # lazygit
+  if ! command -v lazygit >/dev/null 2>&1; then
+    LG_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+    curl -Lo /tmp/lazygit.tar.gz
+  "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LG_VERSION}_Linux_x86_64.tar.gz"
+    tar xf /tmp/lazygit.tar.gz -C /tmp lazygit
+    sudo install /tmp/lazygit /usr/local/bin/lazygit
+  fi
+  
+  # atuin
+  if ! command -v atuin >/dev/null 2>&1; then
+    curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
+  fi
+
 rm -f "$HOME/.zshrc" "$HOME/.tmux.conf"
 
 cd "$DOTFILES"

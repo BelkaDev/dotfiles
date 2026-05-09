@@ -28,7 +28,22 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # ── zoxide ────────────────────────────────────────────────────────────────────
-command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh)"
+command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh --cmd cd)"  
+
+# ── eza ────────────────────────────────────────────────────────────────────
+if command -v eza >/dev/null 2>&1; then
+    alias ls="eza --icons"
+    alias ll="eza -la --icons --git"
+    alias lt="eza --tree --icons --level=2"
+  fi
+  
+  # ── bat ───────────────────────────────────────────────────────────────────────
+  if command -v batcat >/dev/null 2>&1; then
+    alias bat="batcat"
+  fi
+  
+  # ── atuin ─────────────────────────────────────────────────────────────────────
+  command -v atuin >/dev/null 2>&1 && eval "$(atuin init zsh)"
 
 # ── direnv ────────────────────────────────────────────────────────────────────
 export DIRENV_LOG_FORMAT=""
