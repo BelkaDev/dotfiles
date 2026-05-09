@@ -16,7 +16,7 @@ rm -f "$HOME/.zshrc" "$HOME/.tmux.conf"
 cd "$DOTFILES"
 
 for pkg in zsh tmux scripts; do
-  stow --target="$HOME" --restow "$pkg"
+  stow --dir="$DOTFILES" --target="$HOME" --restow "$pkg"
   echo "  stowed $pkg"
 done
 
