@@ -36,12 +36,10 @@ fi
 
 # eza
 #   if ! command -v eza >/dev/null 2>&1; then
-#     EZA_VERSION=$(curl -s "https://api.github.com/repos/eza-community/eza/releases/latest" | grep '"tag_name"' | sed
-#   's/.*"v\([^"]*\)".*/\1/')
-#     curl -Lo /tmp/eza.deb "https://github.com/eza-community/eza/releases/latest/download/eza_${EZA_VERSION}_amd64.deb"
-#     sudo dpkg -i /tmp/eza.deb
+#     curl -Lo /tmp/eza.tar.gz "https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz"
+#     tar xf /tmp/eza.tar.gz -C /tmp eza
+#     sudo install /tmp/eza /usr/local/bin/eza
 #   fi
-
 
   # bat
   if ! command -v bat >/dev/null 2>&1 && ! command -v batcat >/dev/null 2>&1; then
