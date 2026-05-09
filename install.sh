@@ -35,11 +35,12 @@ if ! command -v zoxide >/dev/null 2>&1; then
 fi
 
 # eza
-  if ! command -v eza >/dev/null 2>&1; then
-    EZA_VERSION=$(curl -s "https://api.github.com/repos/eza-community/eza/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-    curl -Lo /tmp/eza.deb "https://github.com/eza-community/eza/releases/latest/download/eza_${EZA_VERSION}_amd64.deb"
-    sudo dpkg -i /tmp/eza.deb
-  fi
+#   if ! command -v eza >/dev/null 2>&1; then
+#     EZA_VERSION=$(curl -s "https://api.github.com/repos/eza-community/eza/releases/latest" | grep '"tag_name"' | sed
+#   's/.*"v\([^"]*\)".*/\1/')
+#     curl -Lo /tmp/eza.deb "https://github.com/eza-community/eza/releases/latest/download/eza_${EZA_VERSION}_amd64.deb"
+#     sudo dpkg -i /tmp/eza.deb
+#   fi
 
 
   # bat
