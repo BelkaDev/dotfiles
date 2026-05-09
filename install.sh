@@ -30,6 +30,10 @@ if [[ ! -d "$HOME/.tmux/plugins/tpm" ]]; then
   git clone --depth=1 https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
 fi
 
+if ! command -v zoxide >/dev/null 2>&1; then
+  curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+fi
+
 rm -f "$HOME/.zshrc" "$HOME/.tmux.conf"
 
 cd "$DOTFILES"
