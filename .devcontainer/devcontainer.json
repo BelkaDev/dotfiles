@@ -1,0 +1,54 @@
+{
+  "customizations": {
+    "codespaces": {
+      "repositories": {
+        "BelkaDev/dotfiles": {
+          "permissions": {
+            "contents": "write"
+          }
+        }
+      }
+    },
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.fontFamily": "FiraCode Nerd Font, monospace"
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
+  "forwardPorts": [3000, 8765, 11434, 19530, 9091],
+  "portsAttributes": {
+    "3000": {
+      "label": "Dev Server",
+      "onAutoForward": "openBrowserOnce"
+    },
+    "8765": {
+      "label": "CC Pocket Bridge",
+      "onAutoForward": "silent",
+      "visibility": "public"
+    },
+    "11434": {
+      "label": "Ollama",
+      "onAutoForward": "silent",
+      "visibility": "private"
+    },
+    "19530": {
+      "label": "Milvus",
+      "onAutoForward": "silent",
+      "visibility": "private"
+    },
+    "9091": {
+      "label": "Milvus Health",
+      "onAutoForward": "silent",
+      "visibility": "private"
+    }
+  },
+  "onCreateCommand": "sudo apt-get update && sudo apt-get install -y direnv tmux bubblewrap ripgrep",
+  "postCreateCommand": "COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn install && scripts/bootstrap/codespace.sh",
+  "postStartCommand": "scripts/bootstrap/codespace-start.sh && tmux new-session -d -s main 2>/dev/null || true"
+}
