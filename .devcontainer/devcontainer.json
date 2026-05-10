@@ -49,5 +49,5 @@
     }
   },
   "postCreateCommand": "COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn install",
-  "postStartCommand": "[ -f ~/scripts/bootstrap/codespace.sh ] && { [ -f ~/.ai_setup_done ] || (~/scripts/bootstrap/codespace.sh && touch ~/.ai_setup_done); ~/scripts/bootstrap/codespace-start.sh; } || true"
+  "postStartCommand": "[ -f ~/scripts/bootstrap/codespace-start.sh ] && ~/scripts/bootstrap/codespace-start.sh || true"
 }
