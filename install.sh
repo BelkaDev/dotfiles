@@ -84,11 +84,4 @@ if command -v zsh >/dev/null 2>&1; then
   chsh -s "$(which zsh)" 2>/dev/null || true
 fi
 
-if [[ -n "${CODESPACE_NAME:-}" ]]; then
-  if [[ ! -f "$HOME/.ai_setup_done" ]]; then
-    "$HOME/scripts/bootstrap/codespace.sh" && touch "$HOME/.ai_setup_done"
-  fi
-  "$HOME/scripts/bootstrap/codespace-start.sh"
-fi
-
 echo "Done."

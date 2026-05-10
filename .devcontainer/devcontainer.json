@@ -48,6 +48,6 @@
       "visibility": "private"
     }
   },
-  "postCreateCommand": "COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn install",
-  "postStartCommand": "[ -f ~/scripts/bootstrap/codespace-start.sh ] && ~/scripts/bootstrap/codespace-start.sh || true"
+  "postCreateCommand": "COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn install && npm install -g @anthropic-ai/claude-code @openai/codex @ccpocket/bridge@latest",
+  "postStartCommand": "[ -f ~/scripts/bootstrap/codespace-start.sh ] && { [ -f ~/.ai_setup_done ] || ($HOME/scripts/ai/setup.sh && touch ~/.ai_setup_done); ~/scripts/bootstrap/codespace-start.sh; } || true"
 }
