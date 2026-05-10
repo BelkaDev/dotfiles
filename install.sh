@@ -4,6 +4,7 @@ set -euo pipefail
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if ! command -v stow >/dev/null 2>&1; then
+  sudo apt-get update -qq 2>/dev/null || true
   sudo apt-get install -y stow 2>/dev/null || brew install stow 2>/dev/null || { echo "install stow manually"; exit 1; }
 fi
 
@@ -81,6 +82,13 @@ done
 
 if command -v zsh >/dev/null 2>&1; then
   chsh -s "$(which zsh)" 2>/dev/null || true
+fi
+
+if [[ -n "${CODESPACE_NAME:-}" ]]; then
+  if [[ ! -f "$HOME/.ai_setup_done" ]]; then
+    "$HOME/scripts/bootstrap/codespace.sh" && touch "$HOME/.ai_setup_done"
+  fi
+  "$HOME/scripts/bootstrap/codespace-start.sh"
 fi
 
 echo "Done."
