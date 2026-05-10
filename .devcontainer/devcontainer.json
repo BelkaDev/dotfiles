@@ -1,14 +1,5 @@
 {
   "customizations": {
-    "codespaces": {
-      "repositories": {
-        "BelkaDev/dotfiles": {
-          "permissions": {
-            "contents": "write"
-          }
-        }
-      }
-    },
     "vscode": {
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh",
@@ -16,38 +7,14 @@
       }
     }
   },
-  "features": {
-    "ghcr.io/devcontainers/features/sshd:1": {
-      "version": "latest"
-    }
-  },
   "forwardPorts": [3000, 8765, 11434, 19530, 9091],
   "portsAttributes": {
-    "3000": {
-      "label": "Dev Server",
-      "onAutoForward": "openBrowserOnce"
-    },
-    "8765": {
-      "label": "CC Pocket Bridge",
-      "onAutoForward": "silent",
-      "visibility": "public"
-    },
-    "11434": {
-      "label": "Ollama",
-      "onAutoForward": "silent",
-      "visibility": "private"
-    },
-    "19530": {
-      "label": "Milvus",
-      "onAutoForward": "silent",
-      "visibility": "private"
-    },
-    "9091": {
-      "label": "Milvus Health",
-      "onAutoForward": "silent",
-      "visibility": "private"
-    }
+    "3000": { "label": "Dev Server", "onAutoForward": "openBrowserOnce" },
+    "8765": { "label": "CC Pocket Bridge", "onAutoForward": "silent", "visibility": "public" },
+    "11434": { "label": "Ollama", "onAutoForward": "silent", "visibility": "private" },
+    "19530": { "label": "Milvus", "onAutoForward": "silent", "visibility": "private" },
+    "9091": { "label": "Milvus Health", "onAutoForward": "silent", "visibility": "private" }
   },
-  "postCreateCommand": "COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn install && npm install -g @anthropic-ai/claude-code @openai/codex @ccpocket/bridge@latest",
+  "postCreateCommand": "npm install -g @anthropic-ai/claude-code @openai/codex @ccpocket/bridge@latest && ([ -f yarn.lock ] && COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn install || true)",
   "postStartCommand": "[ -f ~/scripts/bootstrap/codespace-start.sh ] && { [ -f ~/.ai_setup_done ] || ($HOME/scripts/ai/setup.sh && touch ~/.ai_setup_done); ~/scripts/bootstrap/codespace-start.sh; } || true"
 }
