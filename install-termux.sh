@@ -20,6 +20,17 @@ if [[ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]]; then
   git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
 fi
 
+if [[ ! -d "$ZSH_CUSTOM/themes/powerlevel10k" ]]; then
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
+fi
+
+if [[ ! -f "$HOME/.termux/font.ttf" ]]; then
+  mkdir -p "$HOME/.termux"
+  curl -fLo "$HOME/.termux/font.ttf" \
+    "https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/FiraCode/Regular/FiraCodeNerdFont-Regular.ttf"
+  termux-reload-settings 2>/dev/null || true
+fi
+
 pkg install -y fzf tmux zoxide eza bat lazygit neovim
 
 if [[ ! -d "$HOME/.tmux/plugins/tpm" ]]; then

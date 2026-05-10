@@ -21,6 +21,10 @@ if [[ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]]; then
   git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
 fi
 
+if [[ ! -d "$ZSH_CUSTOM/themes/powerlevel10k" ]]; then
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
+fi
+
 if [[ ! -d "$HOME/.fzf" ]]; then
   git clone --depth=1 https://github.com/junegunn/fzf.git "$HOME/.fzf"
   "$HOME/.fzf/install" --all --no-update-rc
