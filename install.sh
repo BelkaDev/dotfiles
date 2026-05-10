@@ -7,6 +7,8 @@ if ! command -v stow >/dev/null 2>&1; then
   sudo apt-get install -y stow 2>/dev/null || brew install stow 2>/dev/null || { echo "install stow manually"; exit 1; }
 fi
 
+sudo apt-get install -y tmux direnv ripgrep 2>/dev/null || true
+
 if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
   KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
@@ -52,7 +54,7 @@ if ! command -v bat >/dev/null 2>&1 && ! command -v batcat >/dev/null 2>&1; then
 fi
 
 if ! command -v lazygit >/dev/null 2>&1; then
-  LG_VERSION=$(gh api repos/jesseduffield/lazygit/releases/latest --jq '.tag_name' | sed 's/^v//')
+  LG_VERSION=$(curl -fsSLI -o /dev/null -w '%{url_effective}' https://github.com/jesseduffield/lazygit/releases/latest | grep -o '[^/]*$' | sed 's/^v//')
   curl -Lo /tmp/lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LG_VERSION}_Linux_x86_64.tar.gz"
   tar xf /tmp/lazygit.tar.gz -C /tmp lazygit
   sudo install /tmp/lazygit /usr/local/bin/lazygit
@@ -62,11 +64,17 @@ if ! command -v atuin >/dev/null 2>&1; then
   curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 fi
 
+if ! command -v nvim >/dev/null 2>&1; then
+  curl -Lo /tmp/nvim.tar.gz https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+  sudo tar -xf /tmp/nvim.tar.gz -C /usr/local --strip-components=1
+  rm /tmp/nvim.tar.gz
+fi
+
 rm -f "$HOME/.zshrc" "$HOME/.tmux.conf"
 
 cd "$DOTFILES"
 
-for pkg in zsh tmux scripts; do
+for pkg in zsh tmux nvim scripts; do
   stow --dir="$DOTFILES" --target="$HOME" --restow "$pkg"
   echo "  stowed $pkg"
 done
