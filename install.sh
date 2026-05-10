@@ -62,7 +62,7 @@ if ! command -v lazygit >/dev/null 2>&1; then
 fi
 
 if ! command -v atuin >/dev/null 2>&1; then
-  curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
+  curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh || true
 fi
 
 if ! command -v nvim >/dev/null 2>&1; then
