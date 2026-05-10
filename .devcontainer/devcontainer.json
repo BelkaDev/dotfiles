@@ -48,7 +48,6 @@
       "visibility": "private"
     }
   },
-  "onCreateCommand": "sudo apt-get update && sudo apt-get install -y direnv tmux bubblewrap ripgrep",
-  "postCreateCommand": "COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn install && scripts/bootstrap/codespace.sh",
-  "postStartCommand": "scripts/bootstrap/codespace-start.sh && tmux new-session -d -s main 2>/dev/null || true"
+  "postCreateCommand": "COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn install",
+  "postStartCommand": "[ -f ~/.ai_setup_done ] || (~/scripts/bootstrap/codespace.sh && touch ~/.ai_setup_done); ~/scripts/bootstrap/codespace-start.sh"
 }
