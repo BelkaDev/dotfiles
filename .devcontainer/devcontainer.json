@@ -5,6 +5,13 @@
         "terminal.integrated.defaultProfile.linux": "zsh",
         "terminal.integrated.fontFamily": "FiraCode Nerd Font, monospace"
       }
+    },
+    "codespaces": {
+      "repositories": {
+        "BelkaDev/dotfiles": {
+          "permissions": "write-all"
+        }
+      }
     }
   },
   "forwardPorts": [3000, 8765, 11434, 19530, 9091],
@@ -15,6 +22,5 @@
     "19530": { "label": "Milvus", "onAutoForward": "silent", "visibility": "private" },
     "9091": { "label": "Milvus Health", "onAutoForward": "silent", "visibility": "private" }
   },
-  "postCreateCommand": "npm install -g @anthropic-ai/claude-code @openai/codex @ccpocket/bridge@latest && ([ -f yarn.lock ] && COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn install || true)",
-  "postStartCommand": "[ -f ~/scripts/bootstrap/codespace-start.sh ] && { [ -f ~/.ai_setup_done ] || ($HOME/scripts/ai/setup.sh && touch ~/.ai_setup_done); ~/scripts/bootstrap/codespace-start.sh; } || true"
+  "postStartCommand": "[ -f ~/codespace/start.sh ] && ~/codespace/start.sh || true"
 }

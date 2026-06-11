@@ -1,0 +1,12 @@
+[Unit]
+Description=Milvus for claude-context MCP
+After=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=%h/dotfiles/docker/milvus-start.sh
+ExecStop=docker compose -f %h/dotfiles/docker/docker-compose.claude-context.yml down
+
+[Install]
+WantedBy=default.target

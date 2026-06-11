@@ -1,0 +1,2 @@
+ gh codespace create -R <repo_name> -b <branch_name> --idle-timeout 30m
+gh codespace ssh -c <name> -o ServerAliveInterval=55 -N

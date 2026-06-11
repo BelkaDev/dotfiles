@@ -4,42 +4,26 @@ set -euo pipefail
 MODEL="${CLAUDE_CONTEXT_EMBEDDING_MODEL:-nomic-embed-text}"
 DIMENSION="${CLAUDE_CONTEXT_EMBEDDING_DIMENSION:-768}"
 BATCH_SIZE="${CLAUDE_CONTEXT_EMBEDDING_BATCH_SIZE:-24}"
-MCP_PACKAGE_VERSION="${CLAUDE_CONTEXT_MCP_VERSION:-0.1.11}"
 OLLAMA_HOST_VALUE="${OLLAMA_HOST:-http://127.0.0.1:11434}"
+OLLAMA_MODELS="${OLLAMA_MODELS:-$HOME/.ollama/models}"
 MILVUS_ADDRESS="${MILVUS_ADDRESS:-127.0.0.1:19530}"
-CLAUDE_LOG_DIR="${HOME}/.claude"
-CLAUDE_CONTEXT_LOG_FILE="${CLAUDE_LOG_DIR}/claude-context.stderr.log"
-CLAUDE_CONTEXT_TMP_ROOT="${CLAUDE_CONTEXT_TMP_ROOT:-/tmp/claude-context}"
-OLLAMA_MODELS="${OLLAMA_MODELS:-$CLAUDE_CONTEXT_TMP_ROOT/ollama-models}"
-
-export CLAUDE_CONTEXT_TMP_ROOT
-export OLLAMA_MODELS
-
-mkdir -p "$CLAUDE_CONTEXT_TMP_ROOT" "$OLLAMA_MODELS"
-
-if ! command -v ollama >/dev/null 2>&1; then
-  curl -fsSL https://ollama.com/install.sh | sh
-fi
-
-npm install -g "@zilliz/claude-context-mcp@$MCP_PACKAGE_VERSION"
-
-"$(dirname "$0")/start.sh"
-
-ollama pull "$MODEL"
+CLAUDE_CONTEXT_LOG_FILE="${HOME}/.claude/claude-context.stderr.log"
 
 NODE_BIN="$(command -v node)"
 MCP_ENTRY="$(npm root -g)/@zilliz/claude-context-mcp/dist/index.js"
 
 if [[ ! -f "$MCP_ENTRY" ]]; then
-  echo "Could not find claude-context MCP entrypoint: $MCP_ENTRY" >&2
+  echo "claude-context MCP package not found: $MCP_ENTRY" >&2
+  echo "Run mcp/claude-context/install.sh first" >&2
   exit 1
 fi
 
-mkdir -p "$CLAUDE_LOG_DIR"
+mkdir -p "$(dirname "$CLAUDE_CONTEXT_LOG_FILE")"
 
-claude mcp remove claude-context -s local >/dev/null 2>&1 || true
+# Claude Code
+claude mcp remove claude-context -s user >/dev/null 2>&1 || true
 claude mcp add claude-context \
-  -s local \
+  -s user \
   -e EMBEDDING_PROVIDER=Ollama \
   -e EMBEDDING_MODEL="$MODEL" \
   -e EMBEDDING_DIMENSION="$DIMENSION" \
@@ -49,6 +33,7 @@ claude mcp add claude-context \
   -e EMBEDDING_BATCH_SIZE="$BATCH_SIZE" \
   -- /bin/sh -lc "exec '$NODE_BIN' '$MCP_ENTRY' 2>>'$CLAUDE_CONTEXT_LOG_FILE'"
 
+# Codex
 CODEX_CONFIG="${HOME}/.codex/config.toml"
 mkdir -p "${HOME}/.codex"
 python3 - "$CODEX_CONFIG" "$NODE_BIN" "$MCP_ENTRY" \
@@ -79,9 +64,7 @@ if os.path.exists(config_path):
     if '[mcp_servers.claude-context]' in content:
         content = re.sub(
             r'\[mcp_servers\.claude-context\].*?(?=\n\[|\Z)',
-            new_block,
-            content,
-            flags=re.DOTALL,
+            new_block, content, flags=re.DOTALL,
         )
     else:
         content = content.rstrip('\n') + '\n\n' + new_block
@@ -93,7 +76,7 @@ with open(config_path, 'w') as f:
 print("Configured Codex claude-context MCP in", config_path)
 PYEOF
 
-echo "claude-context MCP configured"
-echo "  model: $MODEL"
+echo "Registered claude-context MCP"
+echo "  model:  $MODEL"
 echo "  ollama: $OLLAMA_HOST_VALUE"
 echo "  milvus: $MILVUS_ADDRESS"

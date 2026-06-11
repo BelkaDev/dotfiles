@@ -3,6 +3,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# ── Dotfiles dirs ─────────────────────────────────────────────────────────────
+export DOTFILES_DIR="$(cd "$(dirname "$(readlink -f "${(%):-%x}")")/.." && pwd)"
+export DOTFILES_DOCKER_DIR="$DOTFILES_DIR/docker"
+
 # ── Path ──────────────────────────────────────────────────────────────────────
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.symfony5/bin:$HOME/.local/bin:$PATH
 
@@ -33,14 +37,21 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # ── zoxide ────────────────────────────────────────────────────────────────────
-command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh)"
+command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh --cmd cd)"
 
 # ── direnv ────────────────────────────────────────────────────────────────────
 export DIRENV_LOG_FORMAT=""
-eval "$(direnv hook zsh)"
+command -v direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"
+
+# ── atuin ─────────────────────────────────────────────────────────────────────
+command -v atuin >/dev/null 2>&1 && eval "$(atuin init zsh)"
 
 # ── Secrets (not tracked) ─────────────────────────────────────────────────────
 [ -f ~/.zshrc.secrets ] && source ~/.zshrc.secrets
+
+# ── Modern tool aliases ───────────────────────────────────────────────────────
+command -v eza >/dev/null 2>&1 && alias ls="eza --icons" la="eza --icons -a" ll="eza --icons -la" lt="eza --icons --tree"
+command -v bat >/dev/null 2>&1 && alias cat="bat"
 
 # ── Aliases ───────────────────────────────────────────────────────────────────
 alias g="git"
