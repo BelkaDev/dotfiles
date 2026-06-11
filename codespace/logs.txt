@@ -1,0 +1,634 @@
+2026-06-11 18:52:16.715Z: Host information
+2026-06-11 18:52:16.715Z: ----------------
+2026-06-11 18:52:16.715Z: OS: Ubuntu 22.04.5 LTS (stable release)
+2026-06-11 18:52:16.715Z: Image details: https://github.com/github/codespaces-host-images/blob/main/README.md
+2026-06-11 18:52:16.715Z: ----------------
+
+=================================================================================
+2026-06-11 18:52:16.715Z: Configuration starting...
+2026-06-11 18:52:16.732Z: Cloning...
+2026-06-11 18:52:20.920Z: Using image: mcr.microsoft.com/devcontainers/universal
+
+=================================================================================
+2026-06-11 18:52:21.805Z: Creating container...
+2026-06-11 18:52:21.866Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --user-data-folder /var/lib/docker/codespacemount/.persistedshare --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --omit-config-remote-env-from-metadata --skip-non-blocking-commands --skip-post-create --config "/var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2026-06-11 18:52:22.279Z: @devcontainers/cli 0.83.3. Node.js v18.20.8. linux 6.8.0-1052-azure x64.
+2026-06-11 18:52:22.480Z: $5 -c echo Container started
+2026-06-11 18:52:22.646Z: Container started
+2026-06-11 18:52:23.213Z: Outcome: success User: codespace WorkspaceFolder: /workspaces/phaser-skele2d-box2d
+2026-06-11 18:52:23.221Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2026-06-11 18:52:24.552Z: Running blocking commands...
+2026-06-11 18:52:24.670Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --user-data-folder /var/lib/docker/codespacemount/.persistedshare --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --omit-config-remote-env-from-metadata --skip-non-blocking-commands --expect-existing-container --config "/var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2026-06-11 18:52:25.281Z: @devcontainers/cli 0.83.3. Node.js v18.20.8. linux 6.8.0-1052-azure x64.
+2026-06-11 18:52:26.085Z: Outcome: success User: codespace WorkspaceFolder: /workspaces/phaser-skele2d-box2d
+2026-06-11 18:52:26.104Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2026-06-11 18:52:26.178Z: Configuring codespace...
+2026-06-11 18:52:26.815Z: Running oryx...
+
+=================================================================================
+2026-06-11 18:52:50.825Z: Running commands...
+2026-06-11 18:52:50.825Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d --expect-existing-container --skip-post-attach --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --config "/var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2026-06-11 18:52:51.235Z: @devcontainers/cli 0.83.3. Node.js v18.20.8. linux 6.8.0-1052-azure x64.
+2026-06-11 18:52:51.494Z: Running the postCreateCommand from Feature 'ghcr.io/devcontainers/features/git-lfs:1'...
+
+2026-06-11 18:52:51.494Z: /usr/local/share/pull-git-lfs-artifacts.sh
+2026-06-11 18:52:52.811Z: Fetching git lfs artifacts...2026-06-11 18:52:52.822Z: 
+2026-06-11 18:52:54.290Z: Updated Git hooks.
+Git LFS initialized.
+2026-06-11 18:52:54.350Z: Outcome: success User: codespace WorkspaceFolder: /workspaces/phaser-skele2d-box2d
+2026-06-11 18:52:54.353Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2026-06-11 18:52:54.364Z: Installing dotfiles...
+2026-06-11 18:52:54.377Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d --expect-existing-container --skip-post-attach --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --config "/var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --dotfiles-repository https://github.com/BelkaDev/dotfiles --dotfiles-target-path /workspaces/.codespaces/.persistedshare/dotfiles --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2026-06-11 18:52:54.791Z: @devcontainers/cli 0.83.3. Node.js v18.20.8. linux 6.8.0-1052-azure x64.
+2026-06-11 18:52:55.127Z: $ # Clone & install dotfiles
+2026-06-11 18:52:55.127Z: Cloning into '/workspaces/.codespaces/.persistedshare/dotfiles'...
+
+2026-06-11 18:52:56.792Z: Setting current directory to /workspaces/.codespaces/.persistedshare/dotfiles
+
+2026-06-11 18:52:56.792Z: Executing command /workspaces/.codespaces/.persistedshare/dotfiles/install.sh...
+
+2026-06-11 18:53:04.380Z: Reading package lists...
+2026-06-11 18:53:06.571Z: 
+
+2026-06-11 18:53:06.596Z: Building dependency tree...
+2026-06-11 18:53:07.129Z: 
+Reading state information...
+2026-06-11 18:53:07.190Z: 
+
+2026-06-11 18:53:07.700Z: The following additional packages will be installed:
+
+2026-06-11 18:53:07.702Z:   libevent-core-2.1-7t64 libutempter0
+
+2026-06-11 18:53:07.704Z: Suggested packages:
+  doc-base
+
+2026-06-11 18:53:07.926Z: The following NEW packages will be installed:
+
+2026-06-11 18:53:07.931Z:   direnv libevent-core-2.1-7t64 libutempter0 ripgrep stow tmux
+
+2026-06-11 18:53:07.987Z: 0 upgraded, 6 newly installed, 0 to remove and 106 not upgraded.
+Need to get 5101 kB of archives.
+After this operation, 14.9 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 direnv amd64 2.32.1-2ubuntu0.24.04.3 [2590 kB]
+
+2026-06-11 18:53:08.022Z: 
+2026-06-11 18:53:08.034Z: 
+2026-06-11 18:53:08.053Z: 
+2026-06-11 18:53:08.070Z: 
+2026-06-11 18:53:08.080Z: 
+2026-06-11 18:53:09.761Z: debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+
+2026-06-11 18:53:09.987Z: debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+2026-06-11 18:53:10.144Z: dpkg-preconfigure: unable to re-open stdin: 
+
+2026-06-11 18:53:10.441Z: Fetched 5101 kB in 0s (39.1 MB/s)
+
+2026-06-11 18:53:11.020Z: Selecting previously unselected package direnv.
+(Reading database ... 
+
+2026-06-11 18:53:11.052Z: (Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+
+2026-06-11 18:53:11.145Z: (Reading database ... 65%
+
+2026-06-11 18:53:11.541Z: (Reading database ... 
+2026-06-11 18:53:11.542Z: 70%
+
+2026-06-11 18:53:11.595Z: (Reading database ... 75%
+2026-06-11 18:53:11.596Z: 
+
+2026-06-11 18:53:11.679Z: (Reading database ... 80%
+
+2026-06-11 18:53:12.211Z: (Reading database ... 85%
+
+2026-06-11 18:53:12.281Z: (Reading database ... 90%
+
+2026-06-11 18:53:12.582Z: (Reading database ... 95%
+
+2026-06-11 18:53:12.791Z: (Reading database ... 100%
+(Reading database ... 58630 files and directories currently installed.)
+
+2026-06-11 18:53:12.793Z: Preparing to unpack .../0-direnv_2.32.1-2ubuntu0.24.04.3_amd64.deb ...
+
+2026-06-11 18:53:13.375Z: Unpacking direnv (2.32.1-2ubuntu0.24.04.3) ...
+
+2026-06-11 18:53:14.373Z: Selecting previously unselected package libevent-core-2.1-7t64:amd64.
+
+2026-06-11 18:53:14.378Z: Preparing to unpack .../1-libevent-core-2.1-7t64_2.1.12-stable-9ubuntu2_amd64.deb ...
+
+2026-06-11 18:53:14.393Z: Unpacking libevent-core-2.1-7t64:amd64 (2.1.12-stable-9ubuntu2) ...
+
+2026-06-11 18:53:14.497Z: Selecting previously unselected package libutempter0:amd64.
+
+2026-06-11 18:53:14.499Z: Preparing to unpack .../2-libutempter0_1.2.1-3build1_amd64.deb ...
+
+2026-06-11 18:53:14.517Z: Unpacking libutempter0:amd64 (1.2.1-3build1) ...
+
+2026-06-11 18:53:14.546Z: Selecting previously unselected package ripgrep.
+
+2026-06-11 18:53:14.550Z: Preparing to unpack .../3-ripgrep_14.1.0-1_amd64.deb ...
+
+2026-06-11 18:53:14.552Z: Unpacking ripgrep (14.1.0-1) ...
+
+2026-06-11 18:53:14.632Z: Selecting previously unselected package stow.
+
+2026-06-11 18:53:14.634Z: Preparing to unpack .../4-stow_2.3.1-1_all.deb ...
+
+2026-06-11 18:53:14.641Z: Unpacking stow (2.3.1-1) ...
+
+2026-06-11 18:53:15.033Z: Selecting previously unselected package tmux.
+
+2026-06-11 18:53:15.037Z: Preparing to unpack .../5-tmux_3.4-1ubuntu0.1_amd64.deb ...
+
+2026-06-11 18:53:15.044Z: Unpacking tmux (3.4-1ubuntu0.1) ...
+
+2026-06-11 18:53:15.143Z: Setting up stow (2.3.1-1) ...
+
+2026-06-11 18:53:15.180Z: Setting up direnv (2.32.1-2ubuntu0.24.04.3) ...
+
+2026-06-11 18:53:15.216Z: Setting up libutempter0:amd64 (1.2.1-3build1) ...
+
+2026-06-11 18:53:15.232Z: Setting up ripgrep (14.1.0-1) ...
+
+2026-06-11 18:53:15.247Z: Setting up libevent-core-2.1-7t64:amd64 (2.1.12-stable-9ubuntu2) ...
+
+2026-06-11 18:53:15.547Z: Setting up tmux (3.4-1ubuntu0.1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+
+2026-06-11 18:53:22.966Z: Processing triggers for debianutils (5.17build1) ...
+
+2026-06-11 18:53:23.159Z: Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+
+2026-06-11 18:53:35.181Z: Cloning into '/home/codespace/.fzf'...
+
+2026-06-11 18:53:35.694Z: Downloading bin/fzf ...
+
+2026-06-11 18:53:35.711Z:   % Total    % Received % Xferd  A
+2026-06-11 18:53:35.712Z: verag
+2026-06-11 18:53:35.713Z: e 
+2026-06-11 18:53:35.714Z: Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-06-11 18:53:35.946Z: 
+
+2026-06-11 18:53:35.947Z:   
+2026-06-11 18:53:35.957Z: 0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+
+2026-06-11 18:53:36.132Z: 
+
+2026-06-11 18:53:36.132Z: 1
+2026-06-11 18:53:36.134Z: 00 1923k  100 1923k    0     0  4580k      0 --:--:-- --:--
+2026-06-11 18:53:36.135Z: :-- --:--:-- 4580k
+
+2026-06-11 18:53:36.146Z:   - Checking fzf executable ... 
+2026-06-11 18:53:36.150Z: 0.73.1
+
+2026-06-11 18:53:36.152Z: 
+
+2026-06-11 18:53:36.154Z: Generate /home/codespace/.fzf.bash ... 
+2026-06-11 18:53:36.156Z: OK
+
+2026-06-11 18:53:36.157Z: Generate /home/codespace/.fzf.zsh ... 
+2026-06-11 18:53:36.159Z: OK
+Update fish_user_paths ... 
+2026-06-11 18:53:36.601Z: Failed
+
+
+2026-06-11 18:53:36.604Z: Update /home/codespace/.bashrc:
+  - [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+2026-06-11 18:53:36.608Z:     ~ Skipped
+
+2026-06-11 18:53:36.609Z: 
+Update /home/codespace/.zshrc:
+  - [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+2026-06-11 18:53:36.624Z:     ~ Skipped
+
+2026-06-11 18:53:36.625Z: 
+
+2026-06-11 18:53:36.626Z: Create /home/codespace/.config/fish/functions/fish_user_key_bindings.fish:
+    function fish_user_key_bindings
+
+2026-06-11 18:53:36.626Z:       fzf --fish | source
+    end
+
+
+2026-06-11 18:53:36.635Z: For more information, see: ********/junegunn/fzf
+
+2026-06-11 18:53:36.806Z: Detected architecture: x86_64-unknown-linux-musl
+
+2026-06-11 18:53:37.602Z: Downloaded package: zoxide.tar.gz
+
+2026-06-11 18:53:37.639Z: Installed zoxide to /home/codespace/.local/bin
+
+2026-06-11 18:53:37.650Z: Installed manpages to /home/codespace/.local/share/man
+
+2026-06-11 18:53:37.651Z: 
+zoxide is installed!
+
+2026-06-11 18:53:37.677Z: Reading package lists...
+2026-06-11 18:53:39.513Z: 
+
+2026-06-11 18:53:39.514Z: Building dependency tree...
+2026-06-11 18:53:39.677Z: 
+Reading state information...
+2026-06-11 18:53:39.678Z: 
+
+2026-06-11 18:53:40.112Z: gpg is already the newest version (2.4.4-2ubuntu17.4).
+gpg set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 106 not upgraded.
+
+2026-06-11 18:53:40.295Z: http://deb.gierens.de stable main
+
+2026-06-11 18:53:40.575Z: Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+
+2026-06-11 18:53:40.582Z: Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+
+2026-06-11 18:53:40.591Z: 
+2026-06-11 18:53:40.646Z: Hit:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+
+2026-06-11 18:53:40.732Z: Hit:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+
+2026-06-11 18:53:40.749Z: Hit:6 https://packages.microsoft.com/repos/microsoft-ubuntu-noble-prod noble InRelease
+
+2026-06-11 18:53:40.902Z: 
+2026-06-11 18:53:41.351Z: Fetched 25.1 kB in 1s (24.8 kB/s)
+Reading package lists...
+2026-06-11 18:53:42.778Z: 
+
+2026-06-11 18:53:42.805Z: Reading package lists...
+2026-06-11 18:53:44.294Z: 
+
+2026-06-11 18:53:44.311Z: Building dependency tree...
+2026-06-11 18:53:44.710Z: 
+Reading state information...
+
+2026-06-11 18:53:44.899Z: The following NEW packages will be installed:
+
+2026-06-11 18:53:44.901Z:   eza
+
+2026-06-11 18:53:45.032Z: 0 upgraded, 1 newly installed, 0 to remove and 106 not upgraded.
+Need to get 1027 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://deb.gierens.de stable/main amd64 eza amd64 0.23.4 [1027 kB]
+
+2026-06-11 18:53:45.916Z: debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+
+2026-06-11 18:53:45.926Z: debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+2026-06-11 18:53:45.934Z: dpkg-preconfigure: unable to re-open stdin: 
+
+2026-06-11 18:53:45.960Z: Fetched 1027 kB in 0s (3758 kB/s)
+
+2026-06-11 18:53:45.980Z: Selecting previously unselected package eza.
+(Reading database ... 
+
+2026-06-11 18:53:45.983Z: (Reading database ... 5%
+(Reading database ... 10%
+2026-06-11 18:53:45.984Z: 
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+
+2026-06-11 18:53:46.005Z: (Reading database ... 65%
+
+2026-06-11 18:53:46.018Z: (Reading database ... 70%
+
+2026-06-11 18:53:46.025Z: (Reading database ... 
+2026-06-11 18:53:46.026Z: 75%
+
+2026-06-11 18:53:46.034Z: (Reading database ... 80%
+
+2026-06-11 18:53:46.045Z: (Reading database ... 85%
+
+2026-06-11 18:53:46.053Z: (Reading database ... 90%
+
+2026-06-11 18:53:46.287Z: (Reading database ... 95%
+
+2026-06-11 18:53:46.377Z: (Reading database ... 100%
+(Reading database ... 58725 files and directories currently installed.)
+Preparing to unpack .../archives/eza_0.23.4_amd64.deb ...
+
+2026-06-11 18:53:46.380Z: Unpacking eza (0.23.4) ...
+
+2026-06-11 18:53:46.490Z: Setting up eza (0.23.4) ...
+
+2026-06-11 18:53:46.496Z: Processing triggers for man-db (2.12.0-4build2) ...
+
+2026-06-11 18:53:49.425Z: Reading package lists...
+2026-06-11 18:53:50.878Z: 
+
+2026-06-11 18:53:50.894Z: Building dependency tree...
+2026-06-11 18:53:51.280Z: 
+Reading state information...
+2026-06-11 18:53:51.281Z: 
+
+2026-06-11 18:53:51.458Z: The following additional packages will be installed:
+
+2026-06-11 18:53:51.459Z:   libgit2-1.7 libhttp-parser2.9 libssh2-1t64
+
+2026-06-11 18:53:51.483Z: The following NEW packages will be installed:
+
+2026-06-11 18:53:51.484Z:   bat libgit2-1.7 libhttp-parser2.9 libssh2-1t64
+
+2026-06-11 18:53:51.549Z: 0 upgraded, 4 newly installed, 0 to remove and 106 not upgraded.
+Need to get 3004 kB of archives.
+After this operation, 7103 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libhttp-parser2.9 amd64 2.9.4-6build1 [22.3 kB]
+
+2026-06-11 18:53:51.571Z: 
+2026-06-11 18:53:51.589Z: 
+2026-06-11 18:53:51.620Z: 
+2026-06-11 18:53:51.960Z: Fetched 3004 kB in 0s (15.9 MB/s)
+
+2026-06-11 18:53:52.003Z: Selecting previously unselected package libhttp-parser2.9:amd64.
+(Reading database ... 
+
+2026-06-11 18:53:52.007Z: (Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 
+2026-06-11 18:53:52.008Z: 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+
+2026-06-11 18:53:52.011Z: (Reading database ... 65%
+
+2026-06-11 18:53:52.013Z: (Reading database ... 70%
+
+2026-06-11 18:53:52.015Z: (Reading database ... 75%
+
+2026-06-11 18:53:52.016Z: (Reading database ... 80%
+
+2026-06-11 18:53:52.017Z: (Reading database ... 85%
+
+2026-06-11 18:53:52.019Z: (Reading database ... 90%
+
+2026-06-11 18:53:52.022Z: (Reading database ... 95%
+
+2026-06-11 18:53:52.027Z: (Reading database ... 100%
+(Reading database ... 58735 files and directories currently installed.)
+
+2026-06-11 18:53:52.028Z: Preparing to unpack .../libhttp-parser2.9_2.9.4-6build1_amd64.deb ...
+
+2026-06-11 18:53:52.032Z: Unpacking libhttp-parser2.9:amd64 (2.9.4-6build1) ...
+
+2026-06-11 18:53:52.056Z: Selecting previously unselected package libssh2-1t64:amd64.
+
+2026-06-11 18:53:52.059Z: Preparing to unpack .../libssh2-1t64_1.11.0-4.1ubuntu0.24.04.1_amd64.deb ...
+
+2026-06-11 18:53:52.063Z: Unpacking libssh2-1t64:amd64 (1.11.0-4.1ubuntu0.24.04.1) ...
+
+2026-06-11 18:53:52.084Z: Selecting previously unselected package libgit2-1.7:amd64.
+
+2026-06-11 18:53:52.088Z: Preparing to unpack .../libgit2-1.7_1.7.2+ds-1ubuntu3_amd64.deb ...
+
+2026-06-11 18:53:52.090Z: Unpacking libgit2-1.7:amd64 (1.7.2+ds-1ubuntu3) ...
+
+2026-06-11 18:53:52.409Z: Selecting previously unselected package bat.
+
+2026-06-11 18:53:52.413Z: Preparing to unpack .../bat_0.24.0-1build1_amd64.deb ...
+
+2026-06-11 18:53:52.417Z: Unpacking bat (0.24.0-1build1) ...
+
+2026-06-11 18:53:52.473Z: Setting up libssh2-1t64:amd64 (1.11.0-4.1ubuntu0.24.04.1) ...
+
+2026-06-11 18:53:52.477Z: Setting up libhttp-parser2.9:amd64 (2.9.4-6build1) ...
+
+2026-06-11 18:53:52.482Z: Setting up libgit2-1.7:amd64 (1.7.2+ds-1ubuntu3) ...
+
+2026-06-11 18:53:52.486Z: Setting up bat (0.24.0-1build1) ...
+
+2026-06-11 18:53:52.491Z: Processing triggers for man-db (2.12.0-4build2) ...
+
+2026-06-11 18:53:54.448Z: Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+
+2026-06-11 18:53:55.333Z:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-06-11 18:53:55.558Z: 
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+
+2026-06-11 18:53:55.558Z:   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+
+2026-06-11 18:53:55.727Z: 
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+
+2026-06-11 18:53:55.930Z: 
+100 6640k  100 6640k    0     0  9980k      0 --:--:-- --:--:-- --:--:-- 9980k
+
+2026-06-11 18:53:56.880Z:  _______  _______  __   __  ___   __    _
+|   _   ||       ||  | |  ||   | |  |  | |
+|  |_|  ||_     _||  | |  ||   | |   |_| |
+|       |  |   |  |  |_|  ||   | |       |
+|       |  |   |  |       ||   | |  _    |
+|   _   |  |   |  |       ||   | | | |   |
+|__| |__|  |___|  |_______||___| |_|  |__|
+
+Magical shell history
+
+Atuin setup
+********/atuinsh/atuin
+https://forum.atuin.sh
+
+Please file an issue or reach out on the forum if you encounter any problems!==============================================================================
+
+
+2026-06-11 18:53:57.751Z: downloading atuin 18.16.1 x86_64-unknown-linux-gnu
+
+2026-06-11 18:53:59.048Z: installing to /home/codespace/.atuin/bin
+
+2026-06-11 18:53:59.083Z:   atuin
+
+2026-06-11 18:53:59.093Z:   atuin-update
+
+2026-06-11 18:53:59.098Z: everything's installed!
+
+2026-06-11 18:53:59.133Z: 
+
+2026-06-11 18:53:59.134Z: To add $HOME/.atuin/bin to your PATH, either restart your shell or run:
+
+2026-06-11 18:53:59.134Z: 
+    source $HOME/.atuin/bin/env (sh, bash, zsh)
+    source $HOME/.atuin/bin/env.fish (fish)
+
+2026-06-11 18:53:59.325Z: 
+Atuin installed successfully!
+
+
+2026-06-11 18:53:59.325Z: Non-interactive environment detected — skipping setup prompts.
+You can run the following commands manually after installation:
+
+  atuin import auto       Import your existing shell history
+  atuin register          Sign up for a sync account
+  atuin login             Log in to an existing sync account
+
+ _______  __   __  _______  __    _  ___   _    __   __  _______  __   __
+|       ||  | |  ||   _   ||  |  | ||   | | |  |  | |  ||       ||  | |  |
+|_     _||  |_|  ||  |_|  ||   |_| ||   |_| |  |  |_|  ||   _   ||  | |  |
+  |   |  |       ||       ||       ||      _|  |       ||  | |  ||  |_|  |
+  |   |  |       ||       ||  _    ||     |_   |_     _||  |_|  ||       |
+  |   |  |   _   ||   _   || | |   ||    _  |    |   |  |       ||       |
+  |___|  |__| |__||__| |__||_|  |__||___| |_|    |___|  |_______||_______|
+
+Thanks for installing Atuin! I really hope you like it.
+
+If you have any issues, please open an issue on ******** or visit our forum (https://forum.atuin.sh)!
+
+If you love Atuin, please give us a star on ********! It really helps ⭐️ ********/atuinsh/atuin==============================================================================
+
+ ⚠️  Please restart your shell or open a new terminal for Atuin to take effect!==============================================================================
+
+2026-06-11 18:53:59.332Z:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-06-11 18:53:59.528Z: 
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+
+2026-06-11 18:53:59.682Z: 
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+
+2026-06-11 18:53:59.790Z: 
+
+2026-06-11 18:53:59.791Z: 100 10.8M  100 10.8M    0     0  23.9M      0 --:--:-- --:--:-- --:--:-- 23.9M
+
+2026-06-11 18:54:00.405Z: Cloning into '/home/codespace/.oh-my-zsh/custom/plugins/zsh-autosuggestions'...
+
+2026-06-11 18:54:01.012Z: Cloning into '/home/codespace/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting'...
+
+2026-06-11 18:54:01.566Z: Cloning into '/home/codespace/.oh-my-zsh/custom/themes/powerlevel10k'...
+
+2026-06-11 18:54:02.097Z: Cloning into '/home/codespace/.tmux/plugins/tpm'...
+
+2026-06-11 18:54:03.233Z: => nvm is already installed in /usr/local/share/nvm, trying to update using git> 
+2026-06-11 18:54:04.238Z: => Compressing and cleaning up git repository
+
+2026-06-11 18:54:04.249Z: 
+
+2026-06-11 18:54:04.254Z: => Appending nvm source string to /home/codespace/.bashrc
+
+2026-06-11 18:54:04.257Z: => Appending bash_completion source string to /home/codespace/.bashrc
+
+2026-06-11 18:54:12.316Z: npm notice
+npm notice New minor version of npm available! 11.9.0 -> 11.17.0
+npm notice Changelog: ********/npm/cli/releases/tag/v11.17.0
+npm notice To update run: npm install -g npm@11.17.0
+npm notice
+
+2026-06-11 18:54:12.488Z: => You currently have modules installed globally with `npm`. These will no> longer be linked to the active version of Node when you install a new node> with `nvm`; and they may (depending on how you construct your `$PATH`)> override the binaries of modules installed with `nvm`:
+
+/usr/local/share/nvm/versions/node/v24.14.0/lib
+├── corepack@0.34.6
+└── pnpm@10.32.1> If you wish to uninstall them at a later point (or re-install them under your
+
+2026-06-11 18:54:12.497Z: => `nvm` node installs), you can remove them from the system Node as follows:
+
+2026-06-11 18:54:12.504Z: 
+     $ nvm use system
+     $ npm uninstall -g a_module
+
+
+2026-06-11 18:54:12.514Z: => Close and reopen your terminal to start using nvm or run the following to use it now:
+
+2026-06-11 18:54:12.519Z: 
+export NVM_DIR="/usr/local/share/nvm"
+
+2026-06-11 18:54:12.528Z: && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+2026-06-11 18:54:12.535Z: && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+2026-06-11 18:54:12.961Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/.docker at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-11 18:54:12.970Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/share/dotnet at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/share/nvm at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/sdkman/candidates/java at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-11 18:54:12.982Z:   stowed zsh
+
+2026-06-11 18:54:13.282Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/.docker at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-11 18:54:13.284Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/share/dotnet at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/share/nvm at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/sdkman/candidates/java at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-11 18:54:13.284Z:   stowed tmux
+
+2026-06-11 18:54:13.314Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/.docker at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-11 18:54:13.314Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/share/dotnet at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-11 18:54:13.315Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/share/nvm at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/sdkman/candidates/java at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-11 18:54:13.318Z:   stowed nvim
+
+2026-06-11 18:54:13.346Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/.docker at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-11 18:54:13.347Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/share/dotnet at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/share/nvm at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/sdkman/candidates/java at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-11 18:54:13.349Z:   stowed ai
+
+2026-06-11 18:54:13.378Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/.docker at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-11 18:54:13.384Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/share/dotnet at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/share/nvm at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/sdkman/candidates/java at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-11 18:54:13.384Z: WARNING! stowing codespace would cause conflicts:
+  * existing target is stowed to a different package: install.sh => ../../workspaces/.codespaces/.persistedshare/dotfiles/ai/install.sh
+All operations aborted.
+
+2026-06-11 18:54:13.384Z: 
+2026-06-11 18:54:13.384Z: 
+2026-06-11 18:54:13.384Z: Exit code 1
+2026-06-11 18:54:13.384Z: Stop: Run in container: # Clone & install dotfiles
+2026-06-11 18:54:13.390Z: Outcome: success User: codespace WorkspaceFolder: /workspaces/phaser-skele2d-box2d
+2026-06-11 18:54:13.411Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2026-06-11 18:54:13.411Z: Finished configuring codespace.

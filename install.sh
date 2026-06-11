@@ -114,13 +114,18 @@ rm -f "$HOME/.zshrc" "$HOME/.tmux.conf"
 
 cd "$DOTFILES"
 
-PKGS=(zsh tmux nvim ai)
-[[ -n "${CODESPACE_NAME:-}" ]] && PKGS+=(codespace)
-
-for pkg in "${PKGS[@]}"; do
+for pkg in zsh tmux nvim; do
   stow --dir="$DOTFILES" --target="$HOME" --restow "$pkg"
   echo "  stowed $pkg"
 done
+
+ln -sfn "$DOTFILES/ai" "$HOME/ai"
+echo "  linked ai"
+
+if [[ -n "${CODESPACE_NAME:-}" ]]; then
+  ln -sfn "$DOTFILES/codespace" "$HOME/codespace"
+  echo "  linked codespace"
+fi
 
 if command -v zsh >/dev/null 2>&1; then
   chsh -s "$(which zsh)" 2>/dev/null || true
