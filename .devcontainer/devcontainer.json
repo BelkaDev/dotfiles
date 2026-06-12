@@ -22,5 +22,5 @@
     "19530": { "label": "Milvus", "onAutoForward": "silent", "visibility": "private" },
     "9091": { "label": "Milvus Health", "onAutoForward": "silent", "visibility": "private" }
   },
-  "postStartCommand": "[ -f ~/codespace/start.sh ] && ~/codespace/start.sh || true"
+  "postStartCommand": "[ -f ~/start/codespace.sh ] && ~/start/codespace.sh || true"
 }

@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-curl -fsSL https://claude.ai/install.sh | bash
-curl -fsSL https://chatgpt.com/codex/install.sh | sh
-npm install -g @ccpocket/bridge@latest
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+"$DOTFILES_DIR/claude/install.sh"
+"$DOTFILES_DIR/codex/install.sh"
+"$DOTFILES_DIR/ccpocket/install.sh"
+
+"$DOTFILES_DIR/mcp/claude-context/install.sh"
+"$DOTFILES_DIR/mcp/claude-context/register.sh"
+

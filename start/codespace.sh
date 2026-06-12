@@ -19,7 +19,7 @@ if command -v gh >/dev/null 2>&1; then
 fi
 
 if [ ! -f "$HOME/.ai_setup_done" ]; then
-  "$DOTFILES_DIR/codespace/install.sh" && touch "$HOME/.ai_setup_done"
+  "$DOTFILES_DIR/install/codespace.sh" && touch "$HOME/.ai_setup_done"
 fi
 
 "$DOTFILES_DIR/ai/mcp/start.sh"
