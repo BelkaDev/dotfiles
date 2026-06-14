@@ -46,7 +46,7 @@ for pkg in zsh tmux nvim; do
   echo "  stowed $pkg"
 done
 
-command -v zsh >/dev/null 2>&1 && chsh -s "$(which zsh)" 2>/dev/null || true
+command -v zsh >/dev/null 2>&1 && sudo usermod -s "$(which zsh)" "$(whoami)" 2>/dev/null || true
 
 # ── AI tools ───────────────────────────────────────────────────────────────────
 echo "==> running ai/install.sh from $DOTFILES"
