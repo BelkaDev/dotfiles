@@ -24,14 +24,15 @@ ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
   git clone --depth=1 https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
 
 # ── nvm + node ─────────────────────────────────────────────────────────────────
-if [[ ! -d "$HOME/.nvm" ]]; then
+if [[ ! -d "${NVM_DIR:-$HOME/.nvm}" ]]; then
   curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 fi
 
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-if ! command -v node >/dev/null 2>&1; then
+node_major="$(node -e 'process.stdout.write(String(process.versions.node.split(".")[0]))' 2>/dev/null || echo 0)"
+if [[ "$node_major" -lt 18 ]]; then
   nvm install --lts
 fi
 
