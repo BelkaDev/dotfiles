@@ -3,7 +3,8 @@ set -euo pipefail
 
 DOTFILES="${DOTFILES:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
 
-# ── Symlinks first so postStartCommand works even if something below fails ─────
+# ── Symlinks first for postStartCommand ─────
+ln -sfn "$DOTFILES" "$HOME/dotfiles"
 ln -sfn "$DOTFILES/ai" "$HOME/ai"
 ln -sfn "$DOTFILES/start" "$HOME/start"
 
