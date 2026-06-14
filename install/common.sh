@@ -49,6 +49,7 @@ done
 command -v zsh >/dev/null 2>&1 && chsh -s "$(which zsh)" 2>/dev/null || true
 
 # ── AI tools ───────────────────────────────────────────────────────────────────
+echo "==> running ai/install.sh from $DOTFILES"
 "$DOTFILES/ai/install.sh"
 
 echo "Done."
