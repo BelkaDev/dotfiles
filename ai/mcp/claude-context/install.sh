@@ -4,17 +4,18 @@ set -euo pipefail
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
 
 MODEL="${CLAUDE_CONTEXT_EMBEDDING_MODEL:-nomic-embed-text}"
-MCP_PACKAGE_VERSION="${CLAUDE_CONTEXT_MCP_VERSION:-0.1.11}"
+FORK_REPO="${CLAUDE_CONTEXT_FORK_REPO:-git@github.com:BelkaDev/claude-context.git}"
+FORK_BRANCH="${CLAUDE_CONTEXT_FORK_BRANCH:-fix/sync-cloud-overwrites-indexing-status}"
+BUILD_DIR="/tmp/claude-context-build"
 
 "$DOTFILES_DIR/ai/ollama/install.sh"
 
-INSTALLED_VERSION="$(npm list -g --depth=0 --json 2>/dev/null \
-  | python3 -c "import sys,json; d=json.load(sys.stdin); \
-    print(d.get('dependencies',{}).get('@zilliz/claude-context-mcp',{}).get('version',''))" \
-  2>/dev/null || true)"
-
-if [[ "$INSTALLED_VERSION" != "$MCP_PACKAGE_VERSION" ]]; then
-  npm install -g "@zilliz/claude-context-mcp@$MCP_PACKAGE_VERSION"
-fi
+rm -rf "$BUILD_DIR"
+git clone --depth 1 --branch "$FORK_BRANCH" "$FORK_REPO" "$BUILD_DIR"
+cd "$BUILD_DIR"
+pnpm install
+pnpm build:mcp
+npm install -g "$BUILD_DIR/packages/mcp"
+rm -rf "$BUILD_DIR"
 
 ollama pull "$MODEL"
