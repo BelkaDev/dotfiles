@@ -4,7 +4,7 @@ set -euo pipefail
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
 
 MODEL="${CLAUDE_CONTEXT_EMBEDDING_MODEL:-nomic-embed-text}"
-FORK_REPO="${CLAUDE_CONTEXT_FORK_REPO:-git@github.com:BelkaDev/claude-context.git}"
+FORK_REPO="${CLAUDE_CONTEXT_FORK_REPO:-https://github.com/BelkaDev/claude-context.git}"
 FORK_BRANCH="${CLAUDE_CONTEXT_FORK_BRANCH:-fix/sync-cloud-overwrites-indexing-status}"
 BUILD_DIR="/tmp/claude-context-build"
 
