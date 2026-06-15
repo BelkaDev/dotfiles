@@ -13,8 +13,11 @@ NODE_BIN="$(command -v node)"
 MCP_ENTRY="$(npm root -g)/@zilliz/claude-context-mcp/dist/index.js"
 
 if [[ ! -f "$MCP_ENTRY" ]]; then
-  echo "claude-context MCP package not found: $MCP_ENTRY" >&2
-  echo "Run mcp/claude-context/install.sh first" >&2
+  MCP_ENTRY="$(find "$HOME" /usr/local/lib /usr/local/share -name "index.js" -path "*claude-context-mcp/dist/index.js" 2>/dev/null | head -1)"
+fi
+
+if [[ -z "$MCP_ENTRY" || ! -f "$MCP_ENTRY" ]]; then
+  echo "claude-context MCP package not found, run mcp/claude-context/install.sh first" >&2
   exit 1
 fi
 
