@@ -1,0 +1,218 @@
+2026-06-15 07:57:10.977Z: Host information
+2026-06-15 07:57:10.981Z: ----------------
+2026-06-15 07:57:10.981Z: OS: Ubuntu 22.04.5 LTS (stable release)
+2026-06-15 07:57:10.982Z: Image details: https://github.com/github/codespaces-host-images/blob/main/README.md
+2026-06-15 07:57:10.982Z: ----------------
+
+=================================================================================
+2026-06-15 07:57:10.982Z: Configuration starting...
+2026-06-15 07:57:11.003Z: Cloning...
+2026-06-15 07:57:11.050Z: Using image: mcr.microsoft.com/devcontainers/universal
+
+=================================================================================
+2026-06-15 07:57:11.086Z: Creating container...
+2026-06-15 07:57:11.155Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --user-data-folder /var/lib/docker/codespacemount/.persistedshare --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --omit-config-remote-env-from-metadata --skip-non-blocking-commands --skip-post-create --expect-existing-container --config "/var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2026-06-15 07:57:11.311Z: @devcontainers/cli 0.83.3. Node.js v18.20.8. linux 6.8.0-1052-azure x64.
+2026-06-15 07:57:11.598Z: $ docker start 37aa01c165dd910ff1ebaf449a6802dd9cfae3f54ac7d152c904782b09b7dc68
+2026-06-15 07:57:11.920Z: 37aa01c165dd910ff1ebaf449a6802dd9cfae3f54ac7d152c904782b09b7dc68
+
+2026-06-15 07:57:11.925Z: Stop: Run: docker start 37aa01c165dd910ff1ebaf449a6802dd9cfae3f54ac7d152c904782b09b7dc68
+2026-06-15 07:57:12.251Z: Outcome: success User: codespace WorkspaceFolder: /workspaces/phaser-skele2d-box2d
+2026-06-15 07:57:12.266Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2026-06-15 07:57:12.952Z: Running blocking commands...
+2026-06-15 07:57:13.006Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --user-data-folder /var/lib/docker/codespacemount/.persistedshare --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --omit-config-remote-env-from-metadata --skip-non-blocking-commands --expect-existing-container --config "/var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2026-06-15 07:57:13.235Z: @devcontainers/cli 0.83.3. Node.js v18.20.8. linux 6.8.0-1052-azure x64.
+2026-06-15 07:57:13.661Z: Outcome: success User: codespace WorkspaceFolder: /workspaces/phaser-skele2d-box2d
+2026-06-15 07:57:13.673Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2026-06-15 07:57:13.689Z: Configuring codespace...
+
+=================================================================================
+2026-06-15 07:57:14.024Z: Running commands...
+2026-06-15 07:57:14.132Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d --expect-existing-container --skip-post-attach --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --config "/var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2026-06-15 07:57:14.349Z: @devcontainers/cli 0.83.3. Node.js v18.20.8. linux 6.8.0-1052-azure x64.
+2026-06-15 07:57:14.892Z: Running the postStartCommand from devcontainer.json...
+
+2026-06-15 07:57:14.892Z: [ -f /workspaces/.codespaces/.persistedshare/dotfiles/start/codespace.sh ] && /workspaces/.codespaces/.persistedshare/dotfiles/start/codespace.sh; direnv allow . 2>/dev/null || ********
+2026-06-15 07:57:30.375Z: 
+Reading package lists... 0%
+2026-06-15 07:57:30.478Z: 
+Reading package lists... 0%
+2026-06-15 07:57:30.498Z: 
+Reading package lists... 0%
+2026-06-15 07:57:30.517Z: 
+Reading package lists... 0%
+
+Reading package lists... 0%
+2026-06-15 07:57:30.532Z: 
+Reading package lists... 0%
+
+Reading package lists... 0%
+2026-06-15 07:57:30.687Z: 
+Reading package lists... 6%
+2026-06-15 07:57:30.689Z: 
+Reading package lists... 6%
+2026-06-15 07:57:31.202Z: 
+Reading package lists... 56%
+2026-06-15 07:57:31.277Z: 
+Reading package lists... 63%
+
+Reading package lists... 63%
+2026-06-15 07:57:31.284Z: 
+Reading package lists... 63%
+
+Reading package lists... 63%
+2026-06-15 07:57:31.296Z: 
+Reading package lists... 64%
+
+Reading package lists... 64%
+2026-06-15 07:57:31.341Z: 
+Reading package lists... 69%
+
+Reading package lists... 69%
+2026-06-15 07:57:31.442Z: 
+Reading package lists... 77%
+
+Reading package lists... 77%
+2026-06-15 07:57:31.513Z: 
+Reading package lists... 83%
+
+Reading package lists... 83%
+2026-06-15 07:57:31.518Z: 
+Reading package lists... 83%
+
+Reading package lists... 83%
+2026-06-15 07:57:31.521Z: 
+Reading package lists... 84%
+
+Reading package lists... 84%
+2026-06-15 07:57:31.524Z: 
+Reading package lists... 84%
+
+Reading package lists... 84%
+2026-06-15 07:57:31.528Z: 
+Reading package lists... 84%
+
+Reading package lists... 84%
+2026-06-15 07:57:31.549Z: 
+Reading package lists... 87%
+2026-06-15 07:57:31.551Z: 
+Reading package lists... 87%
+2026-06-15 07:57:31.571Z: 
+Reading package lists... 93%
+
+Reading package lists... 93%
+2026-06-15 07:57:31.589Z: 
+Reading package lists... 99%
+
+Reading package lists... 99%
+2026-06-15 07:57:31.590Z: 
+Reading package lists... 99%
+
+Reading package lists... 99%
+2026-06-15 07:57:31.600Z: 
+Reading package lists... Done
+
+2026-06-15 07:57:35.007Z: 
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+2026-06-15 07:57:35.072Z: 
+Building dependency tree... 50%
+
+Building dependency tree... 50%
+2026-06-15 07:57:35.313Z: 
+Building dependency tree... Done
+
+
+Reading state information... 0% 
+2026-06-15 07:57:35.316Z: 
+Reading state information... 0%
+
+Reading state information... Done
+
+2026-06-15 07:57:35.344Z: stow is already the newest version (2.3.1-1).
+direnv is already the newest version (2.32.1-2ubuntu0.24.04.3).
+2026-06-15 07:57:35.597Z: 0 upgraded, 0 newly installed, 0 to remove and 106 not upgraded.
+2026-06-15 07:57:37.519Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/.docker at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles/ai at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles/start at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+2026-06-15 07:57:37.520Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/share/dotnet at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/share/nvm at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+2026-06-15 07:57:37.520Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/sdkman/candidates/java at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+2026-06-15 07:57:37.522Z:   stowed zsh
+2026-06-15 07:57:37.574Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/.docker at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles/ai at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles/start at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/share/dotnet at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+2026-06-15 07:57:37.577Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/share/nvm at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/sdkman/candidates/java at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+2026-06-15 07:57:37.578Z:   stowed tmux
+2026-06-15 07:57:37.633Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/.docker at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles/ai at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles/start at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/share/dotnet at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/share/nvm at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/sdkman/candidates/java at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+2026-06-15 07:57:37.633Z:   stowed nvim
+2026-06-15 07:57:37.678Z: usermod: no changes
+2026-06-15 07:57:37.681Z: ==> running ai/install.sh from /workspaces/.codespaces/.persistedshare/dotfiles
+2026-06-15 07:57:39.977Z: Setting up Claude Code...
+2026-06-15 07:57:41.095Z: 7[r8[?25h2026-06-15 07:57:41.121Z: 
+
+Checking[10Ginstallation[23Gstatus...
+
+2026-06-15 07:57:41.198Z: [?25l2026-06-15 07:57:41.199Z: 
+[1AInstalling Cl[15Gude C[21Gde n[27Give build latest...
+
+2026-06-15 07:57:41.284Z: 
+[1ASet[5Ging up[12Glauncher and shell[31Gintegration.[45G[K
+
+2026-06-15 07:57:42.909Z: 
+[1A✔ Claude Code successfully installed![K
+
+
+
+[3GVersion:[12G2.1.177
+
+
+
+[3GLocation:[13G~/.local/bin/claude
+
+
+
+
+
+[3GNext:[9GRun[13Gclaude[20G--help to[30Gget[34Gstarted
+
+2026-06-15 07:57:44.914Z: [?25h[?1006l[?1003l[?1002l[?1000l(B[>4m[<u[?1004l[?2031l[?2004l[?25h7[r8[?25h2026-06-15 07:57:44.919Z: [?25h2026-06-15 07:57:44.985Z: 
+✅ Installation complete!
+
+2026-06-15 07:57:45.262Z: Unknown argument: --no-launch2026-06-15 07:57:45.272Z: 
+2026-06-15 07:57:45.273Z: ❌ install/common.sh failed at line 53
+2026-06-15 07:57:45.350Z: Ollama is not installed
+2026-06-15 07:57:45.480Z: Outcome: success User: codespace WorkspaceFolder: /workspaces/phaser-skele2d-box2d
+2026-06-15 07:57:45.493Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2026-06-15 07:57:45.512Z: Installing dotfiles...
+2026-06-15 07:57:45.540Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d --expect-existing-container --skip-post-attach --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --config "/var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --dotfiles-repository https://github.com/BelkaDev/dotfiles --dotfiles-target-path /workspaces/.codespaces/.persistedshare/dotfiles --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2026-06-15 07:57:45.758Z: @devcontainers/cli 0.83.3. Node.js v18.20.8. linux 6.8.0-1052-azure x64.
+2026-06-15 07:57:47.165Z: $ # Clone & install dotfiles
+2026-06-15 07:57:47.167Z: dotfiles marker found
+
+2026-06-15 07:57:47.170Z: 
+2026-06-15 07:57:47.174Z: Stop: Run in container: # Clone & install dotfiles
+2026-06-15 07:57:47.223Z: Outcome: success User: codespace WorkspaceFolder: /workspaces/phaser-skele2d-box2d
+2026-06-15 07:57:47.240Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2026-06-15 07:57:47.446Z: Finished configuring codespace.

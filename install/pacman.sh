@@ -7,6 +7,3 @@ sudo pacman -Sy --noconfirm --needed \
   stow tmux direnv ripgrep fzf zoxide eza bat lazygit atuin neovim
 
 source "$DOTFILES/install/common.sh"
-
-"$DOTFILES/ai/mcp/home-assistant/install.sh"
-"$DOTFILES/ai/mcp/home-assistant/register.sh"

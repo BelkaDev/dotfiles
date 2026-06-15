@@ -49,6 +49,3 @@ if ! command -v nvim >/dev/null 2>&1; then
 fi
 
 source "$DOTFILES/install/common.sh"
-
-"$DOTFILES/ai/mcp/home-assistant/install.sh"
-"$DOTFILES/ai/mcp/home-assistant/register.sh"

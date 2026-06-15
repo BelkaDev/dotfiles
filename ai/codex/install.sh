@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-curl -fsSL https://chatgpt.com/codex/install.sh | sh -s -- --no-launch
+curl -fsSL https://chatgpt.com/codex/install.sh -o /tmp/codex-install.sh
+bash /tmp/codex-install.sh <<< ""
