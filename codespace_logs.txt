@@ -1,0 +1,664 @@
+2026-06-15 12:29:54.231Z: Host information
+2026-06-15 12:29:54.231Z: ----------------
+2026-06-15 12:29:54.231Z: OS: Ubuntu 22.04.5 LTS (stable release)
+2026-06-15 12:29:54.231Z: Image details: https://github.com/github/codespaces-host-images/blob/main/README.md
+2026-06-15 12:29:54.231Z: ----------------
+
+=================================================================================
+2026-06-15 12:29:54.244Z: Configuration starting...
+2026-06-15 12:29:54.273Z: Cloning...
+2026-06-15 12:29:57.935Z: Using image: mcr.microsoft.com/devcontainers/universal
+
+=================================================================================
+2026-06-15 12:29:58.862Z: Creating container...
+2026-06-15 12:29:58.923Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --user-data-folder /var/lib/docker/codespacemount/.persistedshare --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --omit-config-remote-env-from-metadata --skip-non-blocking-commands --skip-post-create --config "/var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2026-06-15 12:29:59.187Z: @devcontainers/cli 0.83.3. Node.js v18.20.8. linux 6.8.0-1052-azure x64.
+2026-06-15 12:29:59.374Z: $5 -c echo Container started
+2026-06-15 12:29:59.681Z: Container started
+2026-06-15 12:29:59.869Z: Setting dockerd Azure DNS.
+2026-06-15 12:30:00.240Z: Outcome: success User: codespace WorkspaceFolder: /workspaces/phaser-skele2d-box2d
+2026-06-15 12:30:00.247Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2026-06-15 12:30:01.137Z: Running blocking commands...
+2026-06-15 12:30:01.193Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --user-data-folder /var/lib/docker/codespacemount/.persistedshare --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --omit-config-remote-env-from-metadata --skip-non-blocking-commands --expect-existing-container --config "/var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2026-06-15 12:30:01.554Z: @devcontainers/cli 0.83.3. Node.js v18.20.8. linux 6.8.0-1052-azure x64.
+2026-06-15 12:30:02.073Z: Outcome: success User: codespace WorkspaceFolder: /workspaces/phaser-skele2d-box2d
+2026-06-15 12:30:02.088Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2026-06-15 12:30:02.119Z: Configuring codespace...
+2026-06-15 12:30:02.615Z: Running oryx...
+
+=================================================================================
+2026-06-15 12:30:38.405Z: Running commands...
+2026-06-15 12:30:38.432Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d --expect-existing-container --skip-post-attach --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --config "/var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2026-06-15 12:30:38.629Z: @devcontainers/cli 0.83.3. Node.js v18.20.8. linux 6.8.0-1052-azure x64.
+2026-06-15 12:30:39.277Z: Running the postCreateCommand from Feature 'ghcr.io/devcontainers/features/git-lfs:1'...
+
+2026-06-15 12:30:39.286Z: /usr/local/share/pull-git-lfs-artifacts.sh
+2026-06-15 12:30:41.754Z: Fetching git lfs artifacts...
+2026-06-15 12:30:44.387Z: Updated Git hooks.
+Git LFS initialized.
+2026-06-15 12:30:44.481Z: Running the postStartCommand from devcontainer.json...
+
+2026-06-15 12:30:44.481Z: [ -f /workspaces/.codespaces/.persistedshare/dotfiles/start/codespace.sh ] && /workspaces/.codespaces/.persistedshare/dotfiles/start/codespace.sh; direnv allow . 2>/dev/null || ********
+2026-06-15 12:30:44.748Z: Outcome: success User: codespace WorkspaceFolder: /workspaces/phaser-skele2d-box2d
+2026-06-15 12:30:44.792Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2026-06-15 12:30:44.792Z: Installing dotfiles...
+2026-06-15 12:30:44.792Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d --expect-existing-container --skip-post-attach --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --config "/var/lib/docker/codespacemount/workspace/phaser-skele2d-box2d/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --dotfiles-repository https://github.com/BelkaDev/dotfiles --dotfiles-target-path /workspaces/.codespaces/.persistedshare/dotfiles --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2026-06-15 12:30:44.981Z: @devcontainers/cli 0.83.3. Node.js v18.20.8. linux 6.8.0-1052-azure x64.
+2026-06-15 12:30:45.480Z: $ # Clone & install dotfiles
+2026-06-15 12:30:45.486Z: Cloning into '/workspaces/.codespaces/.persistedshare/dotfiles'...
+
+2026-06-15 12:30:47.338Z: Setting current directory to /workspaces/.codespaces/.persistedshare/dotfiles
+Executing command /workspaces/.codespaces/.persistedshare/dotfiles/install.sh...
+
+2026-06-15 12:30:52.426Z: Reading package lists...
+2026-06-15 12:30:53.460Z: 
+
+2026-06-15 12:30:53.475Z: Building dependency tree...
+2026-06-15 12:30:53.747Z: 
+Reading state information...
+2026-06-15 12:30:53.791Z: 
+
+2026-06-15 12:30:53.957Z: Suggested packages:
+  doc-base
+
+2026-06-15 12:30:54.013Z: The following NEW packages will be installed:
+
+2026-06-15 12:30:54.014Z:   direnv stow
+
+2026-06-15 12:30:54.054Z: 0 upgraded, 2 newly installed, 0 to remove and 106 not upgraded.
+Need to get 2969 kB of archives.
+After this operation, 8058 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 direnv amd64 2.32.1-2ubuntu0.24.04.3 [2590 kB]
+
+2026-06-15 12:30:54.093Z: 
+2026-06-15 12:30:54.834Z: debconf: unable to initialize frontend: Dialog
+
+2026-06-15 12:30:54.836Z: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+
+2026-06-15 12:30:54.908Z: debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+2026-06-15 12:30:54.912Z: dpkg-preconfigure: unable to re-open stdin: 
+
+2026-06-15 12:30:55.007Z: Fetched 2969 kB in 0s (43.8 MB/s)
+
+2026-06-15 12:30:55.229Z: Selecting previously unselected package direnv.
+(Reading database ... 
+2026-06-15 12:30:55.229Z: 
+
+2026-06-15 12:30:55.254Z: (Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 
+2026-06-15 12:30:55.255Z: 60%
+
+2026-06-15 12:30:55.282Z: (Reading database ... 65%
+2026-06-15 12:30:55.284Z: 
+
+2026-06-15 12:30:55.540Z: (Reading database ... 70%
+
+2026-06-15 12:30:55.581Z: (Reading database ... 75%
+
+2026-06-15 12:30:55.666Z: (Reading database ... 80%
+
+2026-06-15 12:30:55.811Z: (Reading database ... 85%
+
+2026-06-15 12:30:55.891Z: (Reading database ... 90%
+
+2026-06-15 12:30:55.946Z: (Reading database ... 95%
+
+2026-06-15 12:30:56.029Z: (Reading database ... 100%
+(Reading database ... 58630 files and directories currently installed.)
+Preparing to unpack .../direnv_2.32.1-2ubuntu0.24.04.3_amd64.deb ...
+
+2026-06-15 12:30:56.031Z: Unpacking direnv (2.32.1-2ubuntu0.24.04.3) ...
+
+2026-06-15 12:30:56.430Z: Selecting previously unselected package stow.
+
+2026-06-15 12:30:56.431Z: Preparing to unpack .../archives/stow_2.3.1-1_all.deb ...
+
+2026-06-15 12:30:56.433Z: Unpacking stow (2.3.1-1) ...
+
+2026-06-15 12:30:56.690Z: Setting up stow (2.3.1-1) ...
+
+2026-06-15 12:30:56.701Z: Setting up direnv (2.32.1-2ubuntu0.24.04.3) ...
+
+2026-06-15 12:30:56.706Z: Processing triggers for man-db (2.12.0-4build2) ...
+
+2026-06-15 12:30:59.755Z: Cloning into '/home/codespace/.oh-my-zsh/custom/plugins/zsh-autosuggestions'...
+
+2026-06-15 12:31:00.292Z: Cloning into '/home/codespace/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting'...
+
+2026-06-15 12:31:00.838Z: Cloning into '/home/codespace/.oh-my-zsh/custom/themes/powerlevel10k'...
+
+2026-06-15 12:31:01.401Z: Cloning into '/home/codespace/.tmux/plugins/tpm'...
+
+2026-06-15 12:31:03.934Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/.docker at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-15 12:31:03.934Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles/ai at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles/start at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/share/dotnet at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-15 12:31:03.935Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/share/nvm at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-15 12:31:03.936Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/sdkman/candidates/java at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-15 12:31:03.937Z:   stowed zsh
+
+2026-06-15 12:31:03.969Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-15 12:31:03.969Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/.docker at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles/ai at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles/start at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/share/dotnet at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/share/nvm at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-15 12:31:03.972Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/sdkman/candidates/java at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-15 12:31:03.973Z:   stowed tmux
+
+2026-06-15 12:31:04.003Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-15 12:31:04.003Z: BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/.docker at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles/ai at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /workspaces/.codespaces/.persistedshare/dotfiles/start at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/share/dotnet at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/share/nvm at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+BUG in find_stowed_path? Absolute/relative mismatch between Stow dir ../../workspaces/.codespaces/.persistedshare/dotfiles and path /usr/local/sdkman/candidates/java at /usr/share/perl5/Stow.pm line 966, <DATA> line 22.
+
+2026-06-15 12:31:04.009Z:   stowed nvim
+
+2026-06-15 12:31:04.009Z: ==> running ai/install.sh from /workspaces/.codespaces/.persistedshare/dotfiles
+
+2026-06-15 12:31:06.229Z: Setting up Claude Code...
+
+2026-06-15 12:31:07.359Z: 
+Checking installation status...
+2026-06-15 12:31:07.418Z: 
+Installing Claude Code native build latest...
+2026-06-15 12:31:16.751Z: 
+Setting up launcher and shell integration...
+2026-06-15 12:31:28.524Z: 
+✔ Claude Code successfully installed!
+
+  Version: 2.1.177
+
+  Location: ~/.local/bin/claude
+
+
+  Next: Run claude --help to get started
+2026-06-15 12:31:30.820Z: 
+
+2026-06-15 12:31:30.824Z: 
+✅ Installation complete!
+
+
+2026-06-15 12:31:33.083Z: ==> Installing Codex CLI=> Detected platform: Linux (x64)=> Resolved version: 0.139.0
+
+2026-06-15 12:31:33.083Z: ==> Downloading Codex CLI
+
+2026-06-15 12:31:35.942Z: ==> Installing standalone package to /home/codespace/.codex/packages/standalone/releases/0.139.0-x86_64-unknown-linux-musl
+
+2026-06-15 12:31:45.749Z: ==> /home/codespace/.local/bin is already on PATH=> Current terminal: codex=> Future terminals: open a new terminal and run: codex
+Codex CLI 0.139.0 installed successfully.
+
+2026-06-15 12:32:26.878Z: 
+added 141 packages in 40s
+
+32 packages are looking for funding
+  run `npm fund` for details
+
+2026-06-15 12:32:28.720Z: >>> Installing ollama to /usr/local
+
+2026-06-15 12:32:29.180Z: >>> Downloading ollama-linux-amd64.tar.zst
+
+2026-06-15 12:32:29.478Z: #=#=#                                                                          
+
+2026-06-15 12:32:29.551Z: ##O#-#                                                                         
+
+2026-06-15 12:32:29.650Z: ##O=#  #                                                                       
+
+2026-06-15 12:32:33.564Z: 
+                                                                           0.7%
+2026-06-15 12:32:33.930Z: 
+#                                             
+2026-06-15 12:32:33.931Z:                              1.4%
+2026-06-15 12:32:34.044Z: 
+
+2026-06-15 12:32:34.044Z: #
+2026-06-15 12:32:34.044Z:   
+2026-06-15 12:32:34.045Z:   
+2026-06-15 12:32:34.048Z:   
+2026-06-15 12:32:34.049Z:   
+2026-06-15 12:32:34.050Z:                                                                   2.1%
+2026-06-15 12:32:34.283Z: 
+
+2026-06-15 12:32:34.284Z: ##                                        
+2026-06-15 12:32:34.286Z:                                  2.9%
+2026-06-15 12:32:34.452Z: 
+##                                    
+2026-06-15 12:32:34.456Z:                                      3.6%
+2026-06-15 12:32:34.849Z: 
+
+2026-06-15 12:32:34.852Z: ###                     
+2026-06-15 12:32:34.854Z:                                                    5.1%
+2026-06-15 12:32:35.023Z: 
+####                                                                       5.8%
+2026-06-15 12:32:35.394Z: 
+####                                                                       6.6%
+2026-06-15 12:32:35.505Z: 
+#####                                                                      8.0%
+2026-06-15 12:32:35.789Z: 
+######                                                                     9.5%
+2026-06-15 12:32:35.856Z: 
+#
+2026-06-15 12:32:35.856Z: ##
+2026-06-15 12:32:35.856Z: #
+2026-06-15 12:32:35.856Z: ###                                                                   10.3%
+2026-06-15 12:32:36.012Z: 
+########                                                                  11.7%
+2026-06-15 12:32:36.121Z: 
+
+2026-06-15 12:32:36.122Z: #
+2026-06-15 12:32:36.124Z: ########                                  
+2026-06-15 12:32:36.126Z:                                13.2%
+2026-06-15 12:32:36.268Z: 
+###########                                                               15.4%
+2026-06-15 12:32:36.496Z: 
+
+2026-06-15 12:32:36.500Z: #
+2026-06-15 12:32:36.500Z: ###########                                                              16.8%
+2026-06-15 12:32:36.667Z: 
+############                                                              17.5%
+2026-06-15 12:32:36.984Z: 
+#############                                 
+2026-06-15 12:32:36.985Z:                             19.0%
+2026-06-15 12:32:37.118Z: 
+
+2026-06-15 12:32:37.120Z: #
+2026-06-15 12:32:37.120Z: #
+2026-06-15 12:32:37.121Z: #
+2026-06-15 12:32:37.122Z: #
+2026-06-15 12:32:37.122Z: ###########                                                           21.2%
+2026-06-15 12:32:37.281Z: 
+
+2026-06-15 12:32:37.282Z: #
+2026-06-15 12:32:37.282Z: #
+2026-06-15 12:32:37.282Z: #
+2026-06-15 12:32:37.282Z: #
+2026-06-15 12:32:37.282Z: #
+2026-06-15 12:32:37.282Z: #
+2026-06-15 12:32:37.285Z: ##########                                                          22.6%
+2026-06-15 12:32:37.439Z: 
+################                                                          23.4%
+2026-06-15 12:32:37.554Z: 
+
+2026-06-15 12:32:37.554Z: #################                                                         24.8%
+2026-06-15 12:32:37.710Z: 
+
+2026-06-15 12:32:37.721Z: ###################                                                       27.0%
+2026-06-15 12:32:37.961Z: 
+
+2026-06-15 12:32:37.963Z: ###########
+2026-06-15 12:32:37.965Z: ##
+2026-06-15 12:32:37.966Z: #
+2026-06-15 12:32:37.967Z: #####                                                       27.7%
+2026-06-15 12:32:38.544Z: 
+####################                                                      29.2%
+2026-06-15 12:32:38.796Z: 
+
+2026-06-15 12:32:38.796Z: #####################                                                     29.9%
+2026-06-15 12:32:39.370Z: 
+######################                                                    30.6
+2026-06-15 12:32:39.370Z: %
+2026-06-15 12:32:39.515Z: 
+
+2026-06-15 12:32:39.515Z: ######################                                                    31.4%
+2026-06-15 12:32:39.619Z: 
+#######################                                                   32.1%
+2026-06-15 12:32:39.824Z: 
+
+2026-06-15 12:32:39.824Z: #######
+2026-06-15 12:32:39.827Z: #################                                                  33.5%
+2026-06-15 12:32:39.960Z: 
+
+2026-06-15 12:32:39.960Z: ########################                                                 
+2026-06-15 12:32:39.960Z:  
+2026-06-15 12:32:39.960Z: 34.2%
+2026-06-15 12:32:40.209Z: 
+
+2026-06-15 12:32:40.210Z: ###############
+2026-06-15 12:32:40.213Z: ##########                                                 35.0%
+2026-06-15 12:32:40.342Z: 
+
+2026-06-15 12:32:40.342Z: #########################                                                 35.7%
+2026-06-15 12:32:40.452Z: 
+##########################                                                36.4%
+2026-06-15 12:32:40.668Z: 
+###########################                                               37.8%
+2026-06-15 12:32:40.815Z: 
+###########################                                               38.6%
+2026-06-15 12:32:40.982Z: 
+############################                                              39.3%
+2026-06-15 12:32:41.317Z: 
+############################                                              40.0%
+2026-06-15 12:32:41.487Z: 
+#############################                                             40.7%
+2026-06-15 12:32:41.794Z: 
+#############################                                             41.5%
+2026-06-15 12:32:41.913Z: 
+##############################                                            42.9%
+2026-06-15 12:32:42.115Z: 
+###############################       
+2026-06-15 12:32:42.115Z:                                     43.6%
+2026-06-15 12:32:42.294Z: 
+################################                                          45.1%
+2026-06-15 12:32:42.472Z: 
+#################################                                         46.5%
+2026-06-15 12:32:42.803Z: 
+##################################                                        48.0%
+2026-06-15 12:32:42.860Z: 
+###################################                                       49.2%
+2026-06-15 12:32:42.974Z: 
+###################################                                       50.0%
+2026-06-15 12:32:43.123Z: 
+
+2026-06-15 12:32:43.128Z: ######
+2026-06-15 12:32:43.128Z: ##############################                                      50.7%
+2026-06-15 12:32:43.309Z: 
+####################################                                      51.4%
+2026-06-15 12:32:43.413Z: 
+#####################################                                     52.1%
+2026-06-15 12:32:43.533Z: 
+######################################                                    53.5%
+2026-06-15 12:32:43.665Z: 
+
+2026-06-15 12:32:43.668Z: ########################################                                  55.7%
+2026-06-15 12:32:43.929Z: 
+#########################################                                 57.1%
+2026-06-15 12:32:44.034Z: 
+
+2026-06-15 12:32:44.034Z: #########################################                                 57.8%
+2026-06-15 12:32:44.142Z: 
+##
+2026-06-15 12:32:44.144Z: ########################################                                59.2%
+2026-06-15 12:32:44.451Z: 
+###########################################                               60.6%
+2026-06-15 12:32:44.578Z: 
+
+2026-06-15 12:32:44.578Z: ###
+2026-06-15 12:32:44.578Z: #
+2026-06-15 12:32:44.578Z: ########################################                              61.4%
+2026-06-15 12:32:44.689Z: 
+
+2026-06-15 12:32:44.690Z: ####
+2026-06-15 12:32:44.692Z: #########################################                   
+2026-06-15 12:32:44.692Z:           62.8%
+2026-06-15 12:32:44.822Z: 
+##############################################                            64.9%
+2026-06-15 12:32:44.938Z: 
+##############################################
+2026-06-15 12:32:44.939Z: #                
+2026-06-15 12:32:44.945Z:            66.3%
+2026-06-15 12:32:45.073Z: 
+################################################                          67.8%
+2026-06-15 12:32:45.376Z: 
+#################################################                  
+2026-06-15 12:32:45.376Z:        69.2%
+2026-06-15 12:32:45.470Z: 
+##################################################                        70.0%
+2026-06-15 12:32:45.591Z: 
+###################################################                       71.4%
+2026-06-15 12:32:45.719Z: 
+####################################################                      72.9%
+2026-06-15 12:32:45.931Z: 
+#####################################################                     73.6%
+2026-06-15 12:32:46.050Z: 
+#####################################################                     74.3%
+2026-06-15 12:32:46.791Z: 
+######################################################                    75.1%
+2026-06-15 12:32:47.145Z: 
+######################################################                    75.8%
+2026-06-15 12:32:47.360Z: 
+
+2026-06-15 12:32:47.360Z: #
+2026-06-15 12:32:47.360Z: #
+2026-06-15 12:32:47.360Z: #
+2026-06-15 12:32:47.360Z: #
+2026-06-15 12:32:47.360Z: #
+2026-06-15 12:32:47.360Z: #
+2026-06-15 12:32:47.360Z: #################################################                   76.5%
+2026-06-15 12:32:47.550Z: 
+
+2026-06-15 12:32:47.550Z: #######################################################                   77.3%
+2026-06-15 12:32:47.731Z: 
+########################################################                  78.7%
+2026-06-15 12:32:47.878Z: 
+#########################################################                 79.5%
+2026-06-15 12:32:47.996Z: 
+##########################################################                80.9%
+2026-06-15 12:32:48.112Z: 
+##########################################################                81.6%
+2026-06-15 12:32:48.260Z: 
+
+2026-06-15 12:32:48.260Z: ###############
+2026-06-15 12:32:48.263Z: ############################################               82.4%
+2026-06-15 12:32:48.467Z: 
+############################################################              83.8%
+2026-06-15 12:32:48.558Z: 
+############################################################              84.6%
+2026-06-15 12:32:48.884Z: 
+#############################################################             85.3%
+2026-06-15 12:32:49.251Z: 
+
+2026-06-15 12:32:49.252Z: ##############################################################            86.8%
+2026-06-15 12:32:49.451Z: 
+###############################################################           88.2%
+2026-06-15 12:32:49.851Z: 
+################################################################          88.9%
+2026-06-15 12:32:49.912Z: 
+################################################################          89.7%
+2026-06-15 12:32:50.089Z: 
+#################################################################         90.4%
+2026-06-15 12:32:50.410Z: 
+#################################################################         91.1%
+2026-06-15 12:32:50.543Z: 
+##################################################################        91.8%
+2026-06-15 12:32:50.930Z: 
+##################################################################        92.6%
+2026-06-15 12:32:51.138Z: 
+
+2026-06-15 12:32:51.138Z: #
+2026-06-15 12:32:51.138Z: ##################################################################       93.3%
+2026-06-15 12:32:51.368Z: 
+###################################################################      
+2026-06-15 12:32:51.372Z:  94.0%
+2026-06-15 12:32:51.487Z: 
+################################################
+2026-06-15 12:32:51.487Z: ####################      94.8%
+2026-06-15 12:32:51.592Z: 
+####################################################################      95.5%
+2026-06-15 12:32:51.692Z: 
+#####################################################################     96.2%
+2026-06-15 12:32:51.940Z: 
+#####################################################################     97.0%
+2026-06-15 12:32:52.047Z: 
+######################################################################    97.7%
+2026-06-15 12:32:52.218Z: 
+#######################################################################   99.1%
+2026-06-15 12:33:06.213Z: 
+
+2026-06-15 12:33:06.213Z: #######################################################################   99.9%
+2026-06-15 12:33:06.267Z: 
+######################################################################## 100.0%
+
+2026-06-15 12:33:06.310Z: >>> Creating ollama user...
+
+2026-06-15 12:33:06.671Z: >>> Adding ollama user to video group...
+
+2026-06-15 12:33:06.977Z: >>> Adding current user to ollama group...
+
+2026-06-15 12:33:06.977Z: >>> Creating ollama systemd service...
+
+2026-06-15 12:33:06.977Z: WARNING: systemd is not running
+WARNING: Unable to detect NVIDIA/AMD GPU. Install lspci or lshw to automatically detect and install GPU dependencies.
+
+2026-06-15 12:33:06.977Z: >>> The Ollama API is now available at 127.0.0.1:11434.
+>>> Install complete. Run "ollama" from the command line.
+
+2026-06-15 12:33:07.504Z: Ollama already installed (Warning: could not connect to a running Ollama instance
+Warning: client version is 0.30.8)
+
+2026-06-15 12:33:07.811Z: Cloning into '/tmp/claude-context-build'...
+
+2026-06-15 12:33:13.139Z: Scope: all 6 workspace projects
+
+2026-06-15 12:33:13.509Z: Lockfile is up to date, resolution step is skipped
+
+2026-06-15 12:33:14.535Z: Progress: resolved 1, reused 0, downloaded 0, added 0
+
+2026-06-15 12:33:14.535Z: Packages: +940
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+2026-06-15 12:33:15.039Z: Progress: resolved 940, reused 0, downloaded 0, added 0
+
+2026-06-15 12:33:15.111Z: 
+   ╭─────────────────────────────────────────╮
+   │                                         │
+   │   Update available! 10.32.1 → 11.7.0.   │
+   │   Changelog: https://pnpm.io/v/11.7.0   │
+   │    To update, run: pnpm add -g pnpm     │
+   │                                         │
+   ╰─────────────────────────────────────────╯
+
+
+2026-06-15 12:33:16.038Z: Progress: resolved 940, reused 0, downloaded 13, added 0
+
+2026-06-15 12:33:17.039Z: Progress: resolved 940, reused 0, downloaded 58, added 16
+
+2026-06-15 12:33:18.163Z: Progress: resolved 940, reused 0, downloaded 111, added 32
+
+2026-06-15 12:33:19.064Z: Progress: resolved 940, reused 0, downloaded 234, added 76
+
+2026-06-15 12:33:20.234Z: Progress: resolved 940, reused 0, downloaded 320, added 108
+
+2026-06-15 12:33:21.065Z: Progress: resolved 940, reused 0, downloaded 375, added 126
+
+2026-06-15 12:33:22.067Z: Progress: resolved 940, reused 0, downloaded 424, added 143
+
+2026-06-15 12:33:23.071Z: Progress: resolved 940, reused 0, downloaded 441, added 149
+
+2026-06-15 12:33:24.072Z: Progress: resolved 940, reused 0, downloaded 477, added 161
+
+2026-06-15 12:33:25.246Z: Progress: resolved 940, reused 0, downloaded 490, added 162
+
+2026-06-15 12:33:26.079Z: Progress: resolved 940, reused 0, downloaded 497, added 165
+
+2026-06-15 12:33:27.078Z: Progress: resolved 940, reused 0, downloaded 557, added 193
+
+2026-06-15 12:33:28.087Z: Progress: resolved 940, reused 0, downloaded 692, added 275
+
+2026-06-15 12:33:29.086Z: Progress: resolved 940, reused 0, downloaded 748, added 295
+
+2026-06-15 12:33:30.088Z: Progress: resolved 940, reused 0, downloaded 773, added 308
+
+2026-06-15 12:33:31.209Z: Progress: resolved 940, reused 0, downloaded 793, added 316
+
+2026-06-15 12:33:32.179Z: Progress: resolved 940, reused 0, downloaded 839, added 333
+
+2026-06-15 12:33:33.106Z: Progress: resolved 940, reused 0, downloaded 938, added 408
+
+2026-06-15 12:33:34.130Z: Progress: resolved 940, reused 0, downloaded 940, added 443
+
+2026-06-15 12:33:35.109Z: Progress: resolved 940, reused 0, downloaded 940, added 498
+
+2026-06-15 12:33:36.149Z: Progress: resolved 940, reused 0, downloaded 940, added 701
+
+2026-06-15 12:33:37.284Z: Progress: resolved 940, reused 0, downloaded 940, added 783
+
+2026-06-15 12:33:38.150Z: Progress: resolved 940, reused 0, downloaded 940, added 938
+
+2026-06-15 12:33:38.163Z: Progress: resolved 940, reused 0, downloaded 940, added 940, done
+
+2026-06-15 12:33:39.875Z: 
+devDependencies:
++ @types/node 20.19.0
++ @typescript-eslint/eslint-plugin 8.33.1
++ @typescript-eslint/parser 8.33.1
++ assert 2.1.0
++ browserify-zlib 0.2.0
++ eslint 9.28.0
++ https-browserify 1.0.0
++ os-browserify 0.3.0
++ rimraf 6.0.1
++ stream-http 3.2.0
++ tree-sitter-cli 0.25.6
++ typescript 5.8.3
++ url 0.11.4
++ vm-browserify 1.1.2
+
+
+2026-06-15 12:33:39.951Z: ╭ Warning ─────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│   Ignored build scripts: @vscode/vsce-sign@2.0.6, esbuild@0.25.5,            │
+│   keytar@7.9.0, protobufjs@7.5.3, tree-sitter-c-sharp@0.21.3,                │
+│   tree-sitter-cli@0.25.6, tree-sitter-cpp@0.22.3, tree-sitter-go@0.21.2,     │
+│   tree-sitter-java@0.21.0, tree-sitter-javascript@0.21.4,                    │
+│   tree-sitter-python@0.21.0, tree-sitter-rust@0.21.0,                        │
+│   tree-sitter-scala@0.24.0, tree-sitter-typescript@0.21.2,                   │
+│   tree-sitter@0.21.1, unrs-resolver@1.9.0.                                   │
+│   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+│   to run scripts.                                                            │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+2026-06-15 12:33:39.968Z: Done in 30.6s using pnpm v10.32.1
+
+2026-06-15 12:33:41.118Z: 
+> claude-context@0.1.14 build:mcp /tmp/claude-context-build
+> pnpm --filter @zilliz/claude-context-mcp build
+
+
+2026-06-15 12:33:42.133Z: 
+> @zilliz/claude-context-mcp@0.1.14 build /tmp/claude-context-build/packages/mcp
+> pnpm clean && tsc --build --force
+
+
+2026-06-15 12:33:43.043Z: 
+> @zilliz/claude-context-mcp@0.1.14 clean /tmp/claude-context-build/packages/mcp
+> rimraf dist
+
+
+2026-06-15 12:33:58.217Z: 
+added 1 package in 2s
+
+2026-06-15 12:33:59.729Z: Error: could not connect to ollama server, run 'ollama serve' to start it
+
+2026-06-15 12:33:59.734Z: ❌ install/common.sh failed at line 51
+
+2026-06-15 12:33:59.737Z: 
+2026-06-15 12:33:59.738Z: 
+2026-06-15 12:33:59.739Z: Exit code 1
+2026-06-15 12:33:59.741Z: Stop: Run in container: # Clone & install dotfiles
+2026-06-15 12:33:59.942Z: Outcome: success User: codespace WorkspaceFolder: /workspaces/phaser-skele2d-box2d
+2026-06-15 12:33:59.957Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2026-06-15 12:34:00.047Z: Finished configuring codespace.
