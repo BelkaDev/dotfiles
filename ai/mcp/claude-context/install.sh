@@ -15,9 +15,7 @@ git clone --depth 1 --branch "$FORK_BRANCH" "$FORK_REPO" "$BUILD_DIR"
 cd "$BUILD_DIR"
 pnpm install
 pnpm build:mcp
-TARBALL="$(cd "$BUILD_DIR/packages/mcp" && npm pack --pack-destination /tmp 2>/dev/null | tail -1)"
-npm install -g "/tmp/$TARBALL"
-rm -f "/tmp/$TARBALL"
+npm install -g "$BUILD_DIR/packages/mcp"
 rm -rf "$BUILD_DIR"
 
 ollama serve &>/dev/null &
