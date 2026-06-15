@@ -15,7 +15,7 @@ git clone --depth 1 --branch "$FORK_BRANCH" "$FORK_REPO" "$BUILD_DIR"
 cd "$BUILD_DIR"
 pnpm install
 pnpm build:mcp
-npm install -g "$BUILD_DIR/packages/mcp"
+npm install -g --prefix "$HOME/.npm-global" "$BUILD_DIR/packages/mcp"
 rm -rf "$BUILD_DIR"
 
 ollama serve &>/dev/null &

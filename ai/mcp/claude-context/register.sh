@@ -10,13 +10,9 @@ MILVUS_ADDRESS="${MILVUS_ADDRESS:-127.0.0.1:19530}"
 CLAUDE_CONTEXT_LOG_FILE="${HOME}/.claude/claude-context.stderr.log"
 
 NODE_BIN="$(command -v node)"
-MCP_ENTRY="$(npm root -g)/@zilliz/claude-context-mcp/dist/index.js"
+MCP_ENTRY="$HOME/.npm-global/lib/node_modules/@zilliz/claude-context-mcp/dist/index.js"
 
 if [[ ! -f "$MCP_ENTRY" ]]; then
-  MCP_ENTRY="$(find "$HOME" /usr/local/lib /usr/local/share -name "index.js" -path "*claude-context-mcp/dist/index.js" 2>/dev/null | head -1)"
-fi
-
-if [[ -z "$MCP_ENTRY" || ! -f "$MCP_ENTRY" ]]; then
   echo "claude-context MCP package not found, run mcp/claude-context/install.sh first" >&2
   exit 1
 fi
