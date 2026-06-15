@@ -13,6 +13,7 @@ ln -sfn "$DOTFILES/start" "$HOME/start"
 sudo apt-get update -qq
 sudo apt-get install -y stow direnv
 
+sudo chsh -s "$(which zsh)" "$(whoami)"
 source "$DOTFILES/install/common.sh"
 
 export MILVUS_DATA_DIR="/tmp/claude-context"
