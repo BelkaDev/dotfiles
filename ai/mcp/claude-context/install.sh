@@ -16,6 +16,10 @@ cd "$BUILD_DIR"
 pnpm install
 pnpm build:mcp
 npm install -g --prefix "$HOME/.npm-global" "$BUILD_DIR/packages/mcp"
+echo "==> npm prefix: $HOME/.npm-global"
+echo "==> installed packages:"
+ls "$HOME/.npm-global/lib/node_modules/" 2>/dev/null || echo "  (empty)"
+echo "==> dist/index.js exists: $(test -f "$HOME/.npm-global/lib/node_modules/@zilliz/claude-context-mcp/dist/index.js" && echo yes || echo NO)"
 rm -rf "$BUILD_DIR"
 
 ollama serve &>/dev/null &
